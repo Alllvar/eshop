@@ -1,0 +1,2508 @@
+ 
+
+<!DOCTYPE html>
+<html class="color_scheme_white font_family_google_fira">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+
+    <title>​Apple iPhone - купити в Івано-Франківську, Тернополі | купити Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr</title>
+    <meta name="Keywords" content="купити, Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr" />
+    <meta name="Description" content="купити Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon" sizes="180x180" href="/wa-data/public/shop/themes/tapp/favicon/apple-touch-icon.png?v=bOMynwRPkO">
+    <link rel="icon" type="image/png" sizes="32x32" href="/wa-data/public/shop/themes/tapp/favicon/favicon-32x32.png?v=bOMynwRPkO">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wa-data/public/shop/themes/tapp/favicon/favicon-16x16.png?v=bOMynwRPkO">
+    <link rel="manifest" href="/wa-data/public/shop/themes/tapp/favicon/site.webmanifest?v=bOMynwRPkO">
+    <link rel="mask-icon" href="/wa-data/public/shop/themes/tapp/favicon/safari-pinned-tab.svg?v=bOMynwRPkO" color="#000000">
+    <link rel="shortcut icon" href="/wa-data/public/shop/themes/tapp/favicon/favicon.ico?v=bOMynwRPkO">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/wa-data/public/shop/themes/tapp/favicon/browserconfig.xml?v=bOMynwRPkO">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="google-site-verification" content="5adr4o-DOe2Qf9Fd875L30SXrC3Sz4pg7QIqegNsJsY" />
+    
+    
+    
+    <!-- css -->
+    <link href="https://myapplestyle.com.ua/wa-data/public/shop/plugins/set/_/css/style.css" rel="stylesheet">
+ 
+
+
+    <!-- js -->
+    <script type="text/javascript" src="/wa-content/js/jquery/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="/wa-content/js/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/wa-data/public/site/themes/tapp/default.js?v3.3.6.1586707708"></script>
+    
+
+    <script src="https://myapplestyle.com.ua/wa-data/public/shop/plugins/set/_/js/shopSetPlugin.js"></script>
+ 
+
+    <!-- shop app css -->
+
+
+
+<!-- js -->
+<script type="text/javascript" src="/wa-apps/shop/js/lazy.load.js?v8.1.1.1586707708"></script>
+<script type="text/javascript" src="/wa-content/js/jquery-plugins/jquery.cookie.js?v1.11.7"></script>
+<script type="text/javascript" src="/wa-data/public/shop/themes/tapp/default.shop.js?v3.3.6.1586707708"></script>
+
+
+    <link href="/wa-content/css/jquery-ui/base/jquery.ui.slider.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.core.min.js?v1.11.7"></script>
+    <script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.widget.min.js?v1.11.7"></script>
+    <script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.mouse.min.js?v1.11.7"></script>
+    <script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.slider.min.js?v1.11.7"></script>
+    <script type="text/javascript" src="/wa-data/public/shop/themes/tapp/js/jquery.ui.touch-punch.min.js"></script>
+
+
+<!-- plugin hook: 'frontend_head' -->
+
+<script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="/wa-content/js/jquery-ui/jquery.ui.autocomplete.min.js"></script>
+<script>
+    jQuery(function ($) {
+        $(document).on('ready',function () {
+            if ($("#search").length > 0) {
+                $('#search').autocomplete({
+                    delay: 500,
+                    minLength: parseInt('2'),
+                  	appendTo: $('#autocomplete_results'),
+                    source: function (request, response) {
+                        request.term = request.term.replace(/^\s+|\s+$/g, '');
+                        var query = request.term.replace(/\s+/g, '+');
+                        $.ajax({
+                            url: '/smartsearch/',
+                            data: {
+                                term: query
+                            },
+                            type: "GET",
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.status == 'ok') {
+                                    var items = $.map(data.data, function (item) {
+                                        var img = '';
+                                        if (item.img_url) {
+                                            img = '<img src="' + item.img_url + '" />';
+                                        }
+                                        return {
+                                            label: item.name,
+                                            value: item.name,
+                                            url: item.frontend_url,
+                                            text: '<div class="autocomplete__img">' + img + '</div>\
+                                                <div class="autocomplete__content">\
+                                                <span class="autocomplete__name">' + item.name + '</span>\
+                                                <span class="autocomplete__price">' + item.price_str + '</span>\
+                                                </div>'
+                                        }
+                                    });
+                                  	$('#autocomplete_results ul').html("");
+                                    response(items);
+                                }
+                            }
+                        });
+                    },
+                    select: function (event, ui) {
+                        location.href = ui.item.url;
+                    }
+                }).data("autocomplete")._renderMenu = function (ul, items) {
+                    $.each(items, function (index, item) {
+                        $('<li></li>')
+                                .data('item.autocomplete', item)
+                                .append('<a href="' + item.url + '">' + item.text + '</a>')
+                                .appendTo('#autocomplete_results ul');
+                      console.log();
+                    });
+                };
+            }
+        });
+    });
+</script><script>
+(function($, c, time, t2){
+
+
+$[c] = $[c] || {
+    _initialized:false,
+    save_url:false,
+    heartbeat_url:false,
+    save_timer:false,
+    bind_timer:false,
+    heartbeat_timer:false,
+    customer_data:{},
+    selectors: {},
+    init:function(save_url, heartbeat_url, customer_data) {
+        if(this._initialized) {
+            return;
+        }
+        this.initialized = true;
+
+        this.save_url = save_url;
+        this.heartbeat_url = heartbeat_url;
+        this.customer_data = customer_data;
+
+        this._init_selectors();
+
+        $[c]._bind();
+
+        $[c].heartbeat();
+    },
+
+    save:function(){
+        /**
+         * @var this - field
+         */
+        var $f = $(this).closest('form, .quickorder-form');
+
+        if($f.length) {
+            clearTimeout($[c].save_timer);
+            $[c].save_timer = setTimeout(function () {
+                var data = { };
+
+                $f.find('[data-carts-field]').each(function (i, v) {
+                    data[$(v).data('carts-field')] = $(v).val();
+                });
+
+
+                console.log($[c].save_url, data);
+                if($[c].save_url && data) $.post($[c].save_url, data);
+            }, t2)
+        }
+    },
+    heartbeat:function () {
+        if(this.heartbeat_url) {
+            $.get(this.heartbeat_url);
+        }
+    },
+
+    _bind:function() {
+        $('input:not([data-carts-checked]),select:not([data-carts-checked])').each(function (index, field) {
+            var $field = $(field);
+            $field.attr('data-carts-checked', true);
+
+            $.each($[c].selectors, function (key, s) {
+                if($field.is(s.selector)) {
+                    $field
+                        .attr('data-carts-field', s.field)
+                        .on('change blur', $[c].save);
+
+                    if($[c].customer_data[key] && !$field.val()) {
+                        $field.val($[c].customer_data[key]);
+                    }
+
+                    return false;
+                }
+            })
+        });
+
+        clearTimeout($[c].bind_timer);
+        $[c].bind_timer = setTimeout($[c]._bind, time);
+    },
+    _init_selectors:function () {
+        var i, key,
+            fields = [ 'email', 'phone', 'firstname', 'lastname', 'middlename', 'name'];
+        for(i in fields) {
+            key = fields[i];
+            $[c].selectors[key] = {
+                field : 'customer['+key+']',
+                selector : '[name="customer[' + key + ']"], [name="fields[' + key + ']"], ' +
+                    '[name="quickorder_fields[' + key + ']"], [name="auth[data][' + key + ']"]'
+            }
+        }
+    }
+};
+})(jQuery, 'shop_carts_plugin', 3000, 500);
+
+(function ($) {
+$(function(){
+    $.shop_carts_plugin.init(
+        '/cartssave/',
+        '/cartsheartbeat/',
+            {"firstname":null,"lastname":null,"middlename":null,"name":false,"email":"","phone":""}
+    );
+});
+})(jQuery)
+</script>
+<script type="text/javascript">
+$(function(){
+	$.shopSetPlugin.init({
+		url:'/',
+		cart_form_selector: '#page-content form',
+		cart_item_selector: '.cart .row[data-id="ITEMID"] .item-name',
+		cart_item_qty_selector: '.cart .row[data-id="ITEMID"] .item-qty .qty',
+		afterAddCompect: function(response){
+			$('#cart .cart-total').html(response.data.total_html);
+		}
+	})
+})
+</script>
+
+    <meta property="og:type" content="article" />
+<meta property="og:title" content="​Apple iPhone - купити в Івано-Франківську, Тернополі | купити Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr" />
+<meta property="og:description" content="купити Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr" />
+<meta property="og:url" content="https://myapplestyle.com.ua/category/iphone/" />
+ 
+
+    <!--[if lt IE 9]>
+    <script>
+    document.createElement('header');
+    document.createElement('nav');
+    document.createElement('section');
+    document.createElement('article');
+    document.createElement('aside');
+    document.createElement('footer');
+    document.createElement('figure');
+    document.createElement('hgroup');
+    document.createElement('menu');
+    </script>
+    <![endif]-->
+    <link href="/wa-data/public/shop/themes/tapp/app/scss/style.css" rel="stylesheet" type="text/css">
+    <link href="/wa-data/public/shop/themes/tapp/fancybox.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <header class="header">
+    <div class="header__topline">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-3 col-lg-1 col-md-1 col-sm-3 col-xl-1 order-1  d-flex justify-content-between justify-content-lg-start align-items-center header__logo-column">
+                    <div class="header__logo">
+                        <a href="/">
+                           <img src="/wa-data/public/shop/themes/tapp//img/logo_main.png" alt="На головну" height="36">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xl-4 order-4 order-md-2 header__search-col">
+                    <form class="header__search" method="get"  action="/search/">
+                        
+                        <input type="search" id="search" placeholder="Пошук" name="query">
+                        <i class="icon icon-search"></i>
+                        <i class="icon icon-close"></i>
+                        <div id="autocomplete_results">
+                            <ul></ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6  col-md-3 col-sm-6 col-lg-7 col-xl-7 order-2 d-flex  justify-content-between justify-content-md-end justify-content-lg-between align-items-center">
+                    <div class="info-menu  justify-content-start d-none d-lg-flex">
+                                                                        <div class="info-menu__item highlight"> <a href="/remont/" title="Ремонт">Ремонт</a></div>
+                                                                                                <div class="info-menu__item "> <a href="/rozstrochka/" title="Розстрочка">Розстрочка</a></div>
+                                                                                                <div class="info-menu__item "> <a href="/oplata-ta-dostavka/" title="Оплата та доставка">Оплата та доставка</a></div>
+                                                                                                <div class="info-menu__item "> <a href="/kontakti/" title="Контакти">Контакти</a></div>
+                                                                                                                                                                                                                    </div>
+                    <!-- / info-menu -->
+                    <div class="header__icon d-lg-none" style="margin-left:20px;margin-right:15px;">
+                        <a href="tel:380960044488"><i class="icon icon-call"></i></a>
+                    </div>
+                                        <div class="header__icon header__cart  modal-trigger" data-target="cart-modal__container">
+                        <i class="icon icon-shopping-bag"></i>
+                        <i class="cart-count ">1</i>
+                    </div>
+                </div>
+                <div class="col-3 col-sm-2 col-md-2 d-lg-none order-3 order-md-10">
+                    <div class="header__mobile-menu-toggle d-flex d-lg-none align-items-center"><span class="header__mobile-menu-toggle-icon"><i></i>
+                    <i></i>
+                    <i></i></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / header-topline -->
+    <div class="header__menu d-none d-lg-flex">
+    <div class="container">
+        <div class="row">
+            <div class="w-100">
+                <a href="/" class="header__scrolled-logo d-none">
+                    <img src="/wa-data/public/shop/themes/tapp//img/logo_red.svg" alt="На головну" height="36">
+                </a>
+                <ul class="main-nav d-flex justify-content-start align-items-center">
+                                                                                                                                                                    <li class="main-nav__item has-items">
+                        <a href="/category/ipad/" class="main-nav__item-link "><span >iPad</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/ipad/ipad-2018/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1289/advancedparams/7c7e20470a042c870a5d712a4b75fd9f.jpg" class="lazy" alt="iPad 2018">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad 2018   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/ipad/ipad-2019-102/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1380/advancedparams/ipadwifiselectspace201909_GEO_US.png" class="lazy" alt="iPad 2019 10.2&quot;">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad 2019 10.2&quot;   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/ipad/ipad-air-105/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1355/advancedparams/7866.970.jpg" class="lazy" alt="iPad Air 2019">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad Air 2019   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/ipad/ipad-mini-2019/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1356/advancedparams/7916.970.png" class="lazy" alt="iPad Mini 5">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad Mini 5   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/ipad/ipad-pro-11/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1292/advancedparams/iPadPro11CellSilver_2Up_USENSCREENcopy.png" class="lazy" alt="iPad Pro 11&quot;">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad Pro 11&quot;   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/ipad/ipad-pro-129/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1296/advancedparams/iPadPro11CellSpaceGray_2Up_USENSCREENcopy.png" class="lazy" alt="iPad Pro 12.9&quot;">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPad Pro 12.9&quot;   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/ipad/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/ipad/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1268/advancedparams/1593838031_w640_h640_s3img.png');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                            <li class="main-nav__item has-items">
+                        <a href="/category/iphone/" class="main-nav__item-link selected"><span >iPhone</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/iphone/iphone-11/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1377/advancedparams/iphone11purpleselect20191.png" class="lazy" alt="iPhone 11">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 11   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-11-pro/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1378/advancedparams/iphone11promaxmidnightgreenselect2019.png" class="lazy" alt="iPhone 11 Pro">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 11 Pro   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-11-pro-max/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1379/advancedparams/iphone11promaxgoldselect2019_GEO_EMEA.png" class="lazy" alt="iPhone 11 Pro Max">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 11 Pro Max   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-xs/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1283/advancedparams/xs.png" class="lazy" alt="iPhone XS">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone XS   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-xs-max/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1275/advancedparams/iphone_xs_max.png" class="lazy" alt="iPhone XS Max">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone XS Max   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-xr/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1276/advancedparams/xr.png" class="lazy" alt="iPhone XR">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone XR   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-x/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1267/advancedparams/63cdf6a39c835406a79f68bd92c1b98c.jpg" class="lazy" alt="iPhone X">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone X   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-8-plus/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1278/advancedparams/iphone8plus.png" class="lazy" alt="iPhone 8 Plus">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 8 Plus   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-8/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1277/advancedparams/iphone8.png" class="lazy" alt="iPhone 8">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 8   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-7-plus/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1280/advancedparams/iphone7plus.png" class="lazy" alt="iPhone 7 Plus">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 7 Plus   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-7/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1279/advancedparams/iphone7.png" class="lazy" alt="iPhone 7">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 7   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-6s/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1281/advancedparams/iphone6s.png" class="lazy" alt="iPhone 6S">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone 6S   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/iphone/iphone-se/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1282/advancedparams/iphonese.png" class="lazy" alt="iPhone SE">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPhone SE   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/iphone/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/iphone/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1266/advancedparams/NewAppleiPhoneSmartBatteryCaseiPhoneXSiPhoneXSMaxandiPhoneXR.jpg');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                            <li class="main-nav__item has-items">
+                        <a href="/category/mac/" class="main-nav__item-link "><span >Mac</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/mac/macbook-pro/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1294/advancedparams/mbp16touchspaceselect201911700x700.jpeg" class="lazy" alt="MacBook Pro">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> MacBook Pro   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/mac/macbook-air/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1293/advancedparams/macbookair.png" class="lazy" alt="MacBook Air">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> MacBook Air   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/mac/macbook/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1286/advancedparams/macbook12goldmlhe2uaaearly20161.png" class="lazy" alt="MacBook 12">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> MacBook 12   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/mac/imac/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1285/advancedparams/iMacProPSPminihero.png" class="lazy" alt="iMac">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iMac   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/mac/mac-mini/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1287/advancedparams/mac_mini__2018.png" class="lazy" alt="Mac mini">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Mac mini   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/mac/mac-pro/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1288/advancedparams/macpro2019gallery2700x700.jpg" class="lazy" alt="Mac Pro">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Mac Pro   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/mac/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/mac/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1270/advancedparams/2.jpeg');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                            <li class="main-nav__item has-items">
+                        <a href="/category/watch/" class="main-nav__item-link "><span >Apple Watch</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/watch/apple-watch-serias-5/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1381/advancedparams/MX0L2_VW_PFwatch40stainlessspacegraycell5s_VW_PF_WF_SI.png" class="lazy" alt="Apple Watch Series 5">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Apple Watch Series 5   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/watch/apple-watch-series-4/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1298/advancedparams/applewatch440spacegreywhite.png" class="lazy" alt="Apple Watch Series 4">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Apple Watch Series 4   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/watch/apple-watch-series-3/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1297/advancedparams/15403207394210principalm.png" class="lazy" alt="Apple Watch Series 3">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Apple Watch Series 3   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/watch/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/watch/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1269/advancedparams/01WatchSeries4LandingpageHero.png');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                            <li class="main-nav__item has-items">
+                        <a href="/category/aksesuari/" class="main-nav__item-link "><span >Аксесуари</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/aksesuari/chokhli/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1342/advancedparams/appledlyaiphonexsiliconecaseskybluemrrd2zma.jpg.png" class="lazy" alt="Чохли">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Чохли   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/zakhisne-sklo-ta-plvki/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1343/advancedparams/3dGlassiPhoneX500x500.png" class="lazy" alt="Захисне скло та плівки">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Захисне скло та плівки   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/navushniki-ta-kolonki/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1344/advancedparams/106435_p_20.png" class="lazy" alt="Навушники та колонки">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Навушники та колонки   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/category_1348/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1348/advancedparams/iStore5WUSBPowerAdapterCE.png" class="lazy" alt="Зарядні пристрої">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Зарядні пристрої   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/kabel-ta-perekhdniki/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1349/advancedparams/apple_usbctolightning_1m.png" class="lazy" alt="Кабелі та перехідники">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Кабелі та перехідники   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/remapple-watch/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1346/advancedparams/remeshokdlyaapplewatch44mmblackmtpl2.jpg.png" class="lazy" alt="Ремінці для Apple Watch">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Ремінці для Apple Watch   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/mishki-ta-klavaturi/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1350/advancedparams/bez_nazvy1_kopiya.png" class="lazy" alt="Мишки та клавіатури">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Мишки та клавіатури   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/paverbenki/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1351/advancedparams/personalnayazaryadkaxiaomipowerbankoriginal_7d2f02903ec7c1a_300x300.png" class="lazy" alt="Павербенки">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Павербенки   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/stilusi/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1352/advancedparams/50063305_602792.PNG" class="lazy" alt="Стилуси">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Стилуси   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/aksesuari/bezprovdn-zaryadki-ta-trekeri/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1353/advancedparams/160562513origpicd33ff4.png" class="lazy" alt="Безпровідні зарядки та трекери">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Безпровідні зарядки та трекери   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/aksesuari/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/aksesuari/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1271/advancedparams/iPhoneXAccessoriesFeatured.jpg');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                            <li class="main-nav__item ">
+                        <a href="/category/aktsii/" class="main-nav__item-link "><span class="highlight">Акції</span></a>
+                        
+                                            </li>
+                                                                                                            <li class="main-nav__item has-items">
+                        <a href="/category/gadzheti-ta-muzika/" class="main-nav__item-link "><span >Гаджети та музика</span></a>
+                        
+                                                                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="mega-menu-list-wrap d-flex">
+                                                                                                                                    <a href="/category/gadzheti-ta-muzika/apple-tv/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1304/advancedparams/appletv2015240.png" class="lazy" alt="Apple TV">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> Apple TV   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/gadzheti-ta-muzika/airport/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1303/advancedparams/topic_airport_extreme_time_capsule.png" class="lazy" alt="AirPort">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> AirPort   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/gadzheti-ta-muzika/jbl-akustika/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1302/advancedparams/8d6dfafd3e1fd76e68d99ce4dff72692.png" class="lazy" alt="JBL акустика">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> JBL акустика   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                                                                    <a href="/category/gadzheti-ta-muzika/ipod/" class="mega-menu-link">
+                                                <div class="mega-menu-link__img">
+                                                                                                            <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" data-src="/wa-data/public/shop/categories/1301/advancedparams/ipodtouchproductsilver2015.png" class="lazy" alt="iPod">
+                                                                                                    </div>
+                                                <span class="mega-menu-link__name"> iPod   </span>
+                                            </a>
+                                            <!-- /mega-menu-link -->
+                                                                                    </div>
+                                        <!-- /mega-menu-list -->
+                                        <a href="/category/gadzheti-ta-muzika/" class="mega-menu-all-list">
+                                            Дивитись усі 
+                                            <i class="icon icon-right-arrow"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                                                                <a href="/category/gadzheti-ta-muzika/" class="mega-menu-banner" style="background-image: url('/wa-data/public/shop/categories/1300/advancedparams/JBLCharge3watersplashBlack_dvHAMaster.jpg');">
+                                        </a>
+                                                                                <!-- /mega-menu-banner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / megamenu__item -->
+                                            </li>
+                                                                                                                                                                                                                                                                                                                                                                        <li class="main-nav__item chat">
+                        <a href="#" class="main-nav__item-link">
+                            <span>
+                                <div class="chat__header">Чат онлайн</div>
+                                <i class="icon icon-telegram"></i>
+                                <i class="icon icon-skype"></i>
+                                <i class="icon icon-viber"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="main-nav__phones has-items">
+                        <div class="header-phones ">
+                            <i class="icon icon-carret-down"></i>
+                            <div class="header-phones__header">Гаряча лінія:</div>
+                            <div class="header-phones__item current"><a href="tel:+3806604488">+38 <span>(066)</span> 00 444 88</a></div>
+                            <div class="header-phones__dropdown">
+                                <div class="header-phones__item"><a href="tel:+3809604488">+38 <span>(096)</span> 00 444 88</a></div>
+                                <div class="header-phones__item"><a href="tel:+3806604488">+38 <span>(066)</span> 00 444 88</a></div>
+                            </div>
+                        </div>
+                        <!-- / header-phones -->
+                    </li>
+                </ul>
+                <!-- / main-nav -->
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- / header-main -->
+</header>
+    <div id="wrapper" class="wrapper">
+    <!-- APP CONTENT -->
+    <main>
+        <!-- plugin hook: 'frontend_header' -->
+
+
+
+<div class="content" id="page-content" itemscope itemtype="http://schema.org/WebPage">
+    
+
+    <!-- internal navigation breadcrumbs -->
+<div class="container">
+    <div class="row">
+        <div class="w-100">
+            <ul class="breadcrumbs" itemprop="breadcrumb">
+               
+                                 <li>
+                <a href="/">Головна</a>
+                 </li>
+                 
+                                
+                <li>iPhone </li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- breadcrumbs -->
+
+<div class="container d-none d-sm-block">
+    <div class="row">
+        <div class="category__banner w-100" style="background-image:url('/wa-data/public/shop/categories/1266/advancedparams/Categorybanner.png');"></div>
+    </div>
+</div>
+
+<div class="container page-bg category__header">
+    <div class="row">
+        <div class="col-12 d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <h1 class="category__title">iPhone</h1>
+            <div class="category__sort d-flex">
+                <span>Сортувати:</span>
+                <div class="category__sort-wrap">
+                    <span class="category__sort-holder">популярні</span>
+                    <i class="icon icon-carret-down"></i>
+                    <ul class="category__sort-options">
+                        <li data-sort="default">популярні</li>
+                        <li data-sort="price" data-order="asc">від дешевих до дорогих</li>
+                        <li data-sort="price" data-order="desc">від дорогих до дешевих</li>
+                        <li data-sort="create_datetime" data-order="asc">новинки</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container page-bg category__body">
+    <div class="row">
+        <div class="col-12 col-lg-3">
+            <!-- plugin hook: 'frontend_category' -->
+                         <!-- filtering by product features -->
+                         <div class="filters leadbox ajax">
+                <div class="filter-toggle__outer d-block d-sm-none">
+                    <div class="filter-toggle__button"><span>Фільтр <i class="icon icon-plus"></i></span></div>
+                </div>
+                <form class="filters-form-wrapper" method="get" action="/category/iphone/" data-loading="/wa-data/public/site/themes/tapp/img/loading16.gif">
+                    
+                 
+                                                                                                                        <div class="category__subcategories filter-param">
+                        <div class="current_category">
+                            iPhone
+                        </div>
+                        
+                        <ul class="vertical-tree "><li><a href="/category/iphone/iphone-11/" data-icon-id="1377">iPhone 11</a></li><li><a href="/category/iphone/iphone-11-pro/" data-icon-id="1378">iPhone 11 Pro</a></li><li><a href="/category/iphone/iphone-11-pro-max/" data-icon-id="1379">iPhone 11 Pro Max</a></li><li><a href="/category/iphone/iphone-xs/" data-icon-id="1283">iPhone XS</a></li><li><a href="/category/iphone/iphone-xs-max/" data-icon-id="1275">iPhone XS Max</a></li><li><a href="/category/iphone/iphone-xr/" data-icon-id="1276">iPhone XR</a></li><li><a href="/category/iphone/iphone-x/" data-icon-id="1267">iPhone X</a></li><li><a href="/category/iphone/iphone-8-plus/" data-icon-id="1278">iPhone 8 Plus</a></li><li><a href="/category/iphone/iphone-8/" data-icon-id="1277">iPhone 8</a></li><li><a href="/category/iphone/iphone-7-plus/" data-icon-id="1280">iPhone 7 Plus</a></li><li><a href="/category/iphone/iphone-7/" data-icon-id="1279">iPhone 7</a></li><li><a href="/category/iphone/iphone-6s/" data-icon-id="1281">iPhone 6S</a></li><li><a href="/category/iphone/iphone-se/" data-icon-id="1282">iPhone SE</a></li></ul>
+                    </div>
+                                                            
+                                        <div class="filter-param">
+                                                <h5>Колір</h5>  
+                                    
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="10"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="11"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="12"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="13"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#E3B7B2;"></i>Rose Gold</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="14"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#A70213;"></i>(PRODUCT) Red</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="15"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#26272B;"></i>Black</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="17"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#54B1F0;"></i>Blue</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="18"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#FCB26C;"></i>Coral</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="19"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#F3EFEF;"></i>White</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="20"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#F5E645;"></i>Yellow</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="22"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#9EEDA5;"></i>Green</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="30"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#E4ADF8;"></i>Purple</span>
+                                                                            </label>
+                                                                        <label class="color" >
+                                        <input type="checkbox" name="color[]"  value="31"> <span style="white-space: nowrap;"><i class="icon16 color" style="background:#637163;"></i>Midnight Green</span>
+                                                                            </label>
+                                     
+                                     
+                                                                    </div>
+                                                    <div class="filter-param">
+                                                <h5>Пам`ять</h5>  
+                                    
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="1"> 16 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="2"> 32 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="3"> 64 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="4"> 128 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="5"> 256 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="memory[]"  value="6"> 512 GB
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                     
+                                     
+                                                                    </div>
+                                                    <div class="filter-param">
+                                                <h5>Діагональ</h5>  
+                                    
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="4"> 4 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="5"> 4.7 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="6"> 5.5 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="7"> 5.8 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="8"> 6.5 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="f_[]"  value="9"> 6.1 дюйм
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                     
+                                     
+                                                                    </div>
+                                                    <div class="filter-param">
+                                                <h5>Dual SIM</h5>  
+                                    
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="dual_sim[]"  value="22"> Так
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                                                        <label  class="has-toggle" >
+                                        <input type="checkbox" name="dual_sim[]"  value="29"> Ні
+                                                                                <span class="filter__toggle"></span>
+                                                                            </label>
+                                     
+                                     
+                                                                    </div>
+                                                    <div class="filter-param">
+                                                 <h5>Ціна</h5>
+                        <div class="slider" id="slider">
+                            від
+                            <input type="text" class="min" name="price_min"  placeholder="229"> до
+                            <input type="text" class="max" name="price_max"  placeholder="1799"> $
+                        </div>
+                        
+                                                        </div>
+                                 
+                                                                 
+                            </form>
+                        </div>
+                                            </div><!-- col -->
+                    <div class="col-12 col-lg-9">
+
+                        <div class="row">
+                            <div id="product-list" class="w-100">
+                                 
+                                <div class="category__list d-flex w-100 product-list">
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#26272B;"></i>Black</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-64gb-black/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/87/53/5387/images/8053/8053.300.png" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-64gb-black/" class="product-item__name" title="Apple iPhone 11 64GB Black">
+				Apple iPhone 11 64GB Black
+			</a>
+			<div class="product-item__price"><span class="usd">$799 <span class="divider">|</span></span> <span class="uah">22 372 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5387" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-256gb-space-gray/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/80/48/4880/images/7723/7723.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/80/48/4880/images/7722/7722.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-256gb-space-gray/" class="product-item__name" title="iPhone XS Max 256GB (Space Gray)">
+				iPhone XS Max 256GB (Space ...
+			</a>
+			<div class="product-item__price"><span class="usd">$979 <span class="divider">|</span></span> <span class="uah">27 412 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4880" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-256gb-gold/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/82/48/4882/images/7729/7729.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/82/48/4882/images/7728/7728.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-256gb-gold/" class="product-item__name" title="iPhone XS Max 256GB (Gold)">
+				iPhone XS Max 256GB (Gold)
+			</a>
+			<div class="product-item__price"><span class="usd">$979 <span class="divider">|</span></span> <span class="uah">27 412 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4882" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-pro-64gb-gold/" class="product-item__img">
+								<div class="badge badge_new badge_in-list">Новинка</div>
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/08/54/5408/images/8074/8074.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-pro-64gb-gold/" class="product-item__name" title="Apple iPhone 11 Pro 64GB Gold">
+				Apple iPhone 11 Pro 64GB Gold
+			</a>
+			<div class="product-item__price"><span class="usd">$1 099 <span class="divider">|</span></span> <span class="uah">30 772 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5408" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-pro-max-64gb-gold/" class="product-item__img">
+								<div class="badge badge_new badge_in-list">Новинка</div>
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/17/54/5417/images/8083/8083.300.png" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-pro-max-64gb-gold/" class="product-item__name" title="Apple iPhone 11 Pro Max 64GB Gold">
+				Apple iPhone 11 Pro Max 64G...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 215 <span class="divider">|</span></span> <span class="uah">34 020 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5417" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#26272B;"></i>Black</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-7-128gb-black/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/34/36/3634/images/6042/6042.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                                
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/34/36/3634/images/6041/6041.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/apple-iphone-7-128gb-black/" class="product-item__name" title="Apple iPhone 7 128GB (Black)">
+				Apple iPhone 7 128GB (Black)
+			</a>
+			<div class="product-item__price"><span class="usd">$455 <span class="divider">|</span></span> <span class="uah">12 740 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3634" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#26272B;"></i>Black</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-7-plus-128gb-black/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/45/36/3645/images/6064/6064.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-7-plus-128gb-black/" class="product-item__name" title="Apple iPhone 7 Plus 128Gb (Black)">
+				Apple iPhone 7 Plus 128Gb (...
+			</a>
+			<div class="product-item__price"><span class="usd">$615 <span class="divider">|</span></span> <span class="uah">17 220 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3645" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-8-256gb-gold/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/07/39/3907/images/6571/6571.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-8-256gb-gold/" class="product-item__name" title="Apple iPhone 8 256Gb (Gold)">
+				Apple iPhone 8 256Gb (Gold)
+			</a>
+			<div class="product-item__price"><span class="usd">$659 <span class="divider">|</span></span> <span class="uah">18 452 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3907" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-8-plus-256gb-gold/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/13/39/3913/images/6577/6577.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-8-plus-256gb-gold/" class="product-item__name" title="Apple iPhone 8 Plus 256GB (Gold)">
+				Apple iPhone 8 Plus 256GB (...
+			</a>
+			<div class="product-item__price"><span class="usd">$749 <span class="divider">|</span></span> <span class="uah">20 972 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3913" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-x-64gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/18/39/3918/images/6582/6582.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-x-64gb-silver/" class="product-item__name" title="Apple iPhone X 64Gb (Silver)">
+				Apple iPhone X 64Gb (Silver)
+			</a>
+			<div class="product-item__price"><span class="usd">$699 <span class="divider">|</span></span> <span class="uah">19 572 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3918" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-64gb-space-gray/" class="product-item__img">
+								<div class="badge badge_bestseller badge_in-list">Топ продажів</div>
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/68/39/3968/images/6695/6695.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/68/39/3968/images/6694/6694.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-64gb-space-gray/" class="product-item__name" title="iPhone XS 64GB (Space Gray)">
+				iPhone XS 64GB (Space Gray)
+			</a>
+			<div class="product-item__price"><span class="usd">$699 <span class="divider">|</span></span> <span class="uah">19 572 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3968" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#54B1F0;"></i>Blue</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xr-64gb-blue/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/77/39/3977/images/6725/6725.300.jpeg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/77/39/3977/images/6724/6724.300.jpeg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xr-64gb-blue/" class="product-item__name" title="iPhone XR 64GB (Blue)">
+				iPhone XR 64GB (Blue)
+			</a>
+			<div class="product-item__price"><span class="usd">$655 <span class="divider">|</span></span> <span class="uah">18 340 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3977" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-64gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/07/43/4307/images/7738/7738.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/07/43/4307/images/7737/7737.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-64gb-silver/" class="product-item__name" title="iPhone XS Max 64GB Silver">
+				iPhone XS Max 64GB Silver
+			</a>
+			<div class="product-item__price"><span class="usd">$849 <span class="divider">|</span></span> <span class="uah">23 772 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4307" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-64gb-space-gray/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/08/43/4308/images/7741/7741.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/08/43/4308/images/7740/7740.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-64gb-space-gray/" class="product-item__name" title="iPhone XS Max 64GB Space Gray">
+				iPhone XS Max 64GB Space Gray
+			</a>
+			<div class="product-item__price"><span class="usd">$849 <span class="divider">|</span></span> <span class="uah">23 772 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4308" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+									<div class="label-list__sim">
+				Dual SIM
+			</div>
+								</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-64gb-space-gray-1/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/09/43/4309/images/7735/7735.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/09/43/4309/images/7734/7734.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-64gb-space-gray-1/" class="product-item__name" title="iPhone XS Max 64GB Space Gray Dual Sim">
+				iPhone XS Max 64GB Space Gr...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 195 <span class="divider">|</span></span> <span class="uah">33 460 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4309" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+									<div class="label-list__sim">
+				Dual SIM
+			</div>
+								</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-64gb-silver-1/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/10/43/4310/images/7731/7731.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/10/43/4310/images/7733/7733.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-64gb-silver-1/" class="product-item__name" title="iPhone XS Max 64GB Silver Dual Sim">
+				iPhone XS Max 64GB Silver D...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 195 <span class="divider">|</span></span> <span class="uah">33 460 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4310" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+									<div class="label-list__sim">
+				Dual SIM
+			</div>
+								</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-max-64gb-gold-1/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/11/43/4311/images/7548/7548.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/11/43/4311/images/7547/7547.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-max-64gb-gold-1/" class="product-item__name" title="iPhone XS Max 64GB Gold Dual Sim">
+				iPhone XS Max 64GB Gold Dua...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 195 <span class="divider">|</span></span> <span class="uah">33 460 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="4311" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E3B7B2;"></i>Rose Gold</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-6s-128gb-rose-gold/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/90/32/3290/images/5189/5189.300.jpeg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                    			    
+			                    			    
+			                    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/90/32/3290/images/5188/5188.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/apple-iphone-6s-128gb-rose-gold/" class="product-item__name" title="Apple iPhone 6S 128Gb Rose Gold">
+				Apple iPhone 6S 128Gb Rose ...
+			</a>
+			<div class="product-item__price"><span class="usd">$535 <span class="divider">|</span></span> <span class="uah">14 980 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3290" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#F3EFEF;"></i>White</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-64gb-white/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/88/53/5388/images/8054/8054.300.png" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-64gb-white/" class="product-item__name" title="Apple iPhone 11 64GB White">
+				Apple iPhone 11 64GB White
+			</a>
+			<div class="product-item__price"><span class="usd">$789 <span class="divider">|</span></span> <span class="uah">22 092 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5388" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#637163;"></i>Midnight Green</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-pro-64gb-midnight-green/" class="product-item__img">
+								<div class="badge badge_new badge_in-list">Новинка</div>
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/07/54/5407/images/8073/8073.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-pro-64gb-midnight-green/" class="product-item__name" title="Apple iPhone 11 Pro 64GB Midnight Green">
+				Apple iPhone 11 Pro 64GB Mi...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 099 <span class="divider">|</span></span> <span class="uah">30 772 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5407" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#637163;"></i>Midnight Green</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-pro-max-64gb-midnight-green-/" class="product-item__img">
+								<div class="badge badge_new badge_in-list">Новинка</div>
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/18/54/5418/images/8084/8084.300.png" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-pro-max-64gb-midnight-green-/" class="product-item__name" title="Apple iPhone 11 Pro Max 64GB Midnight Green ">
+				Apple iPhone 11 Pro Max 64G...
+			</a>
+			<div class="product-item__price"><span class="usd">$1 199 <span class="divider">|</span></span> <span class="uah">33 572 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5418" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-7-128gb-gold/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/31/36/3631/images/6035/6035.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                                
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/31/36/3631/images/6034/6034.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/apple-iphone-7-128gb-gold/" class="product-item__name" title="Apple iPhone 7 128GB (Gold)">
+				Apple iPhone 7 128GB (Gold)
+			</a>
+			<div class="product-item__price"><span class="usd">$455 <span class="divider">|</span></span> <span class="uah">12 740 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3631" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-8-256gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/06/39/3906/images/6570/6570.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-8-256gb-silver/" class="product-item__name" title="Apple iPhone 8 256Gb (Silver)">
+				Apple iPhone 8 256Gb (Silver)
+			</a>
+			<div class="product-item__price"><span class="usd">$659 <span class="divider">|</span></span> <span class="uah">18 452 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3906" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#E1C9B1;"></i>Gold</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-7-plus-128gb-gold/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/51/36/3651/images/6070/6070.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-7-plus-128gb-gold/" class="product-item__name" title="Apple iPhone 7 Plus 128Gb (Gold)">
+				Apple iPhone 7 Plus 128Gb (...
+			</a>
+			<div class="product-item__price"><span class="usd">$615 <span class="divider">|</span></span> <span class="uah">17 220 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3651" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-8-plus-256gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/12/39/3912/images/6576/6576.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-8-plus-256gb-silver/" class="product-item__name" title="Apple iPhone 8 Plus 256GB (Silver)">
+				Apple iPhone 8 Plus 256GB (...
+			</a>
+			<div class="product-item__price"><span class="usd">$749 <span class="divider">|</span></span> <span class="uah">20 972 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3912" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				256 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-x-256gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/20/39/3920/images/6584/6584.300.jpg" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-x-256gb-silver/" class="product-item__name" title="Apple iPhone X 256Gb (Silver)">
+				Apple iPhone X 256Gb (Silver)
+			</a>
+			<div class="product-item__price"><span class="usd">$779 <span class="divider">|</span></span> <span class="uah">21 812 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3920" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#C7C8C8;"></i>Silver</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xs-64gb-silver/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/69/39/3969/images/6698/6698.300.jpg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/69/39/3969/images/6697/6697.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xs-64gb-silver/" class="product-item__name" title="iPhone XS 64GB (Silver)">
+				iPhone XS 64GB (Silver)
+			</a>
+			<div class="product-item__price"><span class="usd">$705 <span class="divider">|</span></span> <span class="uah">19 740 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3969" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#F3EFEF;"></i>White</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/iphone-xr-64gb-white/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/78/39/3978/images/6728/6728.300.jpeg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/78/39/3978/images/6727/6727.300.jpeg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/iphone-xr-64gb-white/" class="product-item__name" title="iPhone XR 64GB (White)">
+				iPhone XR 64GB (White)
+			</a>
+			<div class="product-item__price"><span class="usd">$655 <span class="divider">|</span></span> <span class="uah">18 340 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3978" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#262628;"></i>Space Gray</span></div>
+												<div class="label-list__memory">
+				128 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-6s-64gb-space-gray-2/" class="product-item__img">
+								
+												
+									    			    
+			                    			    
+			                    <img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/91/32/3291/images/5195/5195.300.jpeg" alt="" itemprop="image" class="lazy hover-image">
+                                			    
+			                    			    
+			                    			    
+			                    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/91/32/3291/images/5194/5194.300.jpg" alt="" itemprop="image" class="lazy main-image">
+		
+			</a>
+			<a href="/apple-iphone-6s-64gb-space-gray-2/" class="product-item__name" title="Apple iPhone 6s 128gb Space Gray">
+				Apple iPhone 6s 128gb Space...
+			</a>
+			<div class="product-item__price"><span class="usd">$535 <span class="divider">|</span></span> <span class="uah">14 980 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="3291" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+						<div class="product-item-ui">
+		<div class="label-list d-flex align-items-center flex-column">
+						<div class="label-list__credit">
+				<span>Кредит</span>
+			</div>
+												<div class="label-list__color"><span style="white-space: nowrap;"><i class="icon16 color" style="background:#A70213;"></i>(PRODUCT) Red</span></div>
+												<div class="label-list__memory">
+				64 GB
+			</div>
+											</div>
+		<!-- /label-list -->
+		<div class="product-item d-flex flex-column align-items-center">
+			<a href="/apple-iphone-11-64gb-product-red/" class="product-item__img">
+								<div class="badge badge_new badge_in-list">Новинка</div>
+												
+									    			    
+			                                    
+				<img src="/wa-data/public/shop/themes/tapp/img/logo.svg" data-src="/wa-data/public/shop/products/89/53/5389/images/8055/8055.300.png" alt="" itemprop="image" class="lazy ">
+		
+			</a>
+			<a href="/apple-iphone-11-64gb-product-red/" class="product-item__name" title="Apple iPhone 11 64GB (PRODUCT) RED">
+				Apple iPhone 11 64GB (PRODU...
+			</a>
+			<div class="product-item__price"><span class="usd">$789 <span class="divider">|</span></span> <span class="uah">22 092 <span>грн.</span></span></div>
+			<div class="product-item__btn">
+				<button class="button button_add2cart ajax2cart" data-product-id="5389" data-action="/cart/add/">Купити</button>
+			</div>
+		</div>
+	</div>
+	<!-- /product-item-ui -->
+	</div>
+<div class="block lazyloading-paging"  data-times="2" data-link-text="Завантажити ще..." data-loading-str="Завантаження...">
+	<ul class="menu-h category__pagination"><li class="selected"><a href="/category/iphone/">1</a></li><li><a href="/category/iphone/?page=2">2</a></li><li><span>...</span></li><li><a href="/category/iphone/?page=7">7</a></li><li><a class="inline-link" href="/category/iphone/?page=2">→</a></li></ul>
+</div>
+  
+                                                            </div>
+                        </div>
+
+
+                    </div><!-- col -->
+                    <div class="col-12 category__description">
+                        <!-- description -->
+                                                <p><p><strong>Apple iPhone - купити в Івано-Франківську, Тернополі</strong></p>
+
+<p>Флагманські смартфони Apple iPhone - стильні багатофункціональні девайси для яскравого життя, що випускаються американською корпорацією Apple вже протягом більше десяти років. Побачили світ влітку 2007 року, перше покоління телефонів Apple, відразу ж завоювало значну частину ринку смартфонів, ставши родоначальником всіх, унікальних у своєму роді девайсів.</p>
+
+<p>Популярність «яблучних» смартов серії iPhone обумовлена чудовою естетикою і унікальним стилем в поєднанні з прогресивними технологіями, що використовуються при розробці та створенні кожного покоління мобільних пристроїв. Сьогодні купити новий смартфон Епл, значить отримати масу можливостей, які дає оригінальна операційна система iOS зі зручним для користувача інтерфейсом і широким мультимедійним функціоналом.</p>
+
+<p>Якщо ви не знаєте, де вигідно купити телефон <strong>Епл в Івано-Франківську</strong> <strong>з доставкою</strong> та за реальною ціною - ласкаво просимо в інтернет-магазин «<strong>tapp store</strong>», який пропонує <strong>широкий асортимент Apple-продукції.</strong></p>
+
+<p>У нас представлені найсвіжіші новинки електроніки та цифрової техніки, включаючи затребувані і актуальні мобільні телефони <strong>Apple iPhone</strong>, які популярні серед величезного числа користувачів.</p>
+
+<p>У нас ви можете підібрати і <strong>купити Apple iPhone 6, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, iPhone XS Max, iPhone Xr</strong>&nbsp;плюс фірмові <strong>аксесуари</strong>, які зроблять телефон унікальним у своєму роді - <strong>чохли, захисні плівки, навушники, зарядні пристрої, кабелі</strong> та інші приємні дрібниці для вашого смартфона. У продажу пропонуються не тільки стильні, але і корисні атрибути - автомобільні утримувачі, портативні динаміки, додаткові об'єктиви або розгалужувачі для навушників.</p></p>
+                                            </div><!-- col -->
+                </div><!-- row -->
+            </div><!-- container -->
+
+
+    <div class="clear-both"></div>
+
+</div>
+
+
+    </main>
+    
+    
+    <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12 d-flex d-flex justify-content-center justify-content-lg-left align-items-md-center order-1">
+                <div class="logo logo_footer">
+                    <a href="/">
+                           <img src="/wa-data/public/shop/themes/tapp//img/logo.svg" alt="На головну" height="36">
+                        </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 order-lg-2 order-3">
+                <div class="footer-nav-blok">
+                    <div class="footer-nav-header">
+                        Категорії товарів
+                    </div>
+                    <!-- / footer-nav-header -->
+                    <ul class="footer-nav-list">
+                                                                                                <li>
+                            <a href="/category/ipad/"><span>iPad</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/iphone/"><span>iPhone</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/mac/"><span>Mac</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/watch/"><span>Apple Watch</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/aksesuari/"><span>Аксесуари</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/aktsii/"><span>Акції</span></a>
+                        </li>
+                                                                                                <li>
+                            <a href="/category/gadzheti-ta-muzika/"><span>Гаджети та музика</span></a>
+                        </li>
+                                                                    </ul>
+                    <!-- / footer-nav-list -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 order-3 order-lg-2">
+                <div class="footer-nav-blok">
+                    <div class="footer-nav-header ">
+                        Інформація та послуги
+                    </div>
+                    <!-- / footer-nav-header -->
+                    <ul class="footer-nav-list">
+                                                                           <li>
+                            <a href="/remont/" title="Ремонт">Ремонт</a>
+                        </li>
+                                                                                                <li>
+                            <a href="/rozstrochka/" title="Розстрочка">Розстрочка</a>
+                        </li>
+                                                                                                <li>
+                            <a href="/oplata-ta-dostavka/" title="Оплата та доставка">Оплата та доставка</a>
+                        </li>
+                                                                                                <li>
+                            <a href="/kontakti/" title="Контакти">Контакти</a>
+                        </li>
+                                                                                                                                                                                                                    </ul>
+                    <!-- / footer-nav-list -->
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 order-2 order-lg-3 d-blok d-md-flex justify-content-center justify-content-lg-end">
+                <div class="footer-contacts-wrap d-flex flex-column justify-content-center d-md-blok">
+                    <div class="footer-nav-header footer-nav-header_right">
+                        Зв’язок
+                    </div>
+                    <!-- / footer-nav-header -->
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-number"><a href="tel:+380960044488">+38 <span>(096)</span> 00 444 88</a></div>
+                        <div class="footer__contacts-number"><a href="tel:+380660044488">+38 <span>(066)</span> 00 444 88</a></div>
+                        <div class="footer__contacts-time">Пн.- Сб.: 10:00 - 19:00</div>
+                    </div>
+                    <!-- / footer-contacts -->
+                    <ul class="footer__socials d-flex justify-content-center justify-content-lg-end align-items-center">
+                        <li>
+                            <a href="https://www.facebook.com/myapplestyle"><i class="icon icon-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/myapplestyle/"><i class="icon icon-instagram"></i></a>
+                        </li>
+                    </ul>
+                    <!-- / social-list -->
+                </div>
+                <!--/ footer-contacts-wrap -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / footer -->
+<script src="https://mssg.me/widget/tapp.ua" async></script>
+<script type="text/javascript" src="/wa-data/public/shop/themes/tapp/app/js/libs.min.js"></script>
+
+<script>
+          $(document).on('click', '.callback__form-fields button', function() {
+                      var errors = false;
+          $('.callback__form-fields input').each(function(){
+
+              if($(this).val().length < 3){
+                    $(this).addClass('error');
+                    errors = true;
+              }
+          });
+        if(errors == false){
+              $('#sendmail').trigger('submit');
+        }
+
+        });
+        $(document).on('change keyup', '.callback__form-fields input', function() {
+            var name = $('.callback__form-fields input[name=remote_name]').val();
+            var phone = $('.callback__form-fields input[name=remote_phone]').val();
+            var question = $('.callback__form-fields input[name=remote_question]').val();
+
+
+            var message = ''+name+', '+phone+','+question+'';
+
+
+            $('#sendmail input[name=name]').val(name);
+            $('#sendmail textarea[name=body]').val(message);
+            console.log(message);
+        });
+        $(document).ready(function() {
+              $(document).on("submit", "#sendmail",function() {
+                var form = $(this);
+                var data = form.serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: location.href,
+                    data: data,
+                    success:function(){
+                       $('.callback__form-fields').html('<h2>Дякуємо, ми вам зателефонуємо.</h2>');
+
+                    }
+
+                 });
+                return false;
+            });
+        });
+        
+</script>
+<script type="text/javascript">
+  (function(d, w, s) {
+	var widgetHash = '22218', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
+	gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
+	var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
+  })(document, window, 'script');
+</script> 
+<style>
+#widget_circle {
+    display:none;
+}
+#widget_circle[rel=active] {
+    display:initial;
+}
+</style>
+
+    </div>
+    <!-- /wrapper -->
+    
+     <div class="cart-modal cart-modal__container">
+    <div class="cart-modal__header text-center">
+        <i class="icon icon-cart"></i> <span>Корзина </span> <i class="icon icon-close cart-modal__close modal-close"></i>
+    </div>
+    <div class="cart-modal__content">
+     
+		     
+		    		    <div  class="d-none">
+            Array
+(
+    [2726] => Array
+        (
+            [id] => 2726
+            [code] => 0304287992531f3d6879abf77a7538da
+            [contact_id] => 
+            [product_id] => 5390
+            [sku_id] => 5475
+            [create_datetime] => 2020-04-11 13:37:39
+            [quantity] => 1
+            [type] => product
+            [service_id] => 
+            [service_variant_id] => 
+            [parent_id] => 
+            [product] => Array
+                (
+                    [id] => 5390
+                    [id_1c] => 
+                    [name] => Apple iPhone 11 64GB Green
+                    [summary] => 
+                    [meta_title] => 
+                    [meta_keywords] => 
+                    [meta_description] => 
+                    [description] => 
+                    [contact_id] => 7
+                    [create_datetime] => 2019-09-11 11:44:33
+                    [edit_datetime] => 2020-04-01 17:38:01
+                    [status] => 1
+                    [type_id] => 2
+                    [image_id] => 8056
+                    [image_filename] => 
+                    [video_url] => 
+                    [sku_id] => 5475
+                    [ext] => png
+                    [url] => apple-iphone-11-64gb-green
+                    [rating] => 0.00
+                    [price] => 22652.0000
+                    [compare_price] => 0.0000
+                    [currency] => USD
+                    [min_price] => 22652.0000
+                    [max_price] => 22652.0000
+                    [tax_id] => 0
+                    [count] => 
+                    [cross_selling] => 
+                    [upselling] => 
+                    [rating_count] => 0
+                    [total_sales] => 43799.1000
+                    [category_id] => 1377
+                    [badge] => 
+                    [sku_type] => 0
+                    [base_price_selectable] => 0.0000
+                    [compare_price_selectable] => 0.0000
+                    [purchase_price_selectable] => 0.0000
+                    [sku_count] => 1
+                    [original_price] => 22652.0000
+                    [original_compare_price] => 0.0000
+                    [params] => Array
+                        (
+                        )
+
+                    [unconverted_currency] => USD
+                    [unconverted_price] => 22652.0000
+                    [frontend_price] => 22652.0000
+                    [unconverted_min_price] => 22652.0000
+                    [frontend_min_price] => 22652.0000
+                    [unconverted_max_price] => 22652.0000
+                    [frontend_max_price] => 22652.0000
+                    [unconverted_compare_price] => 0.0000
+                    [frontend_compare_price] => 0.0000
+                )
+
+            [sku_code] => 
+            [purchase_price] => 0.0000
+            [compare_price] => 0.0000
+            [sku_name] => 
+            [currency] => USD
+            [price] => 809.0000
+            [name] => Apple iPhone 11 64GB Green
+            [sku_file_name] => 
+        )
+
+)
+1
+            </div>
+   			    	    <div class="cart-modal__item">
+   				<div class="cart-modal__item-img">
+   					<a href="/apple-iphone-11-64gb-green/"><img alt="Apple iPhone 11 64GB Green" title="Apple iPhone 11 64GB Green" src="/wa-data/public/shop/products/90/53/5390/images/8056/8056.120.png"></a>
+   				</div>
+   				<div class="cart-modal__item-meta">
+   					<div class="cart-modal__item-name"><a href="/apple-iphone-11-64gb-green/">Apple iPhone 11 64GB Green	</a></div>
+   					<div class="cart-modal__item-price"><span>1 x </span>$809 </div>
+   					   				</div>
+   				<span class="cart-modal__item-remove" data-product-id="2726"><i class="icon icon-close"></i></span>
+   			</div>
+   	       	        </div>
+    <div class="cart-modal__footer ">
+        <div class="cart-modal__total">
+        	Всього: <span>$809</span>
+        </div>
+        <div class="cart-modal__controls">
+		<a href="/cart/" class="button button_primary button_checkout w-100">
+			Оформити замовлення
+		</a>
+	</div>
+    </div>
+</div>
+<!-- /cart-modal -->
+    <div class="mobile-nav__container">
+    <ul class="mobile-nav__categories main" data-id="1">
+        <li>
+            <div class="mobile-nav__title">Каталог товарів</div>
+        </li>
+                                                <li data-target-menu="1268-children" class="has-sub">
+            <span>iPad</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                                        <li data-target-menu="1266-children" class="has-sub">
+            <span>iPhone</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                                        <li data-target-menu="1270-children" class="has-sub">
+            <span>Mac</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                                        <li data-target-menu="1269-children" class="has-sub">
+            <span>Apple Watch</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                                        <li data-target-menu="1271-children" class="has-sub">
+            <span>Аксесуари</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                                <li>
+            <a href="/category/aktsii/"><span>Акції</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                                                        <li data-target-menu="1300-children" class="has-sub">
+            <span>Гаджети та музика</span><i class="icon icon-right-arrow"></i>
+        </li>
+                                <li>
+            <div class="mobile-nav__title">Інформація та сервіси</div>
+        </li>
+     
+                        <li class="has-link"><a href="/remont/" title="Ремонт" ><span>Ремонт</span></a><i class="icon icon-right-arrow"></i></li>
+                                        <li class="has-link"><a href="/rozstrochka/" title="Розстрочка" ><span>Розстрочка</span></a><i class="icon icon-right-arrow"></i></li>
+                                        <li class="has-link"><a href="/oplata-ta-dostavka/" title="Оплата та доставка" ><span>Оплата та доставка</span></a><i class="icon icon-right-arrow"></i></li>
+                                        <li class="has-link"><a href="/kontakti/" title="Контакти" ><span>Контакти</span></a><i class="icon icon-right-arrow"></i></li>
+                                                                                                    </ul>
+    <!-- /main menu -->
+    
+                <ul class="mobile-nav__categories translated-right" data-id="1268-children">
+        <li data-parent-id="1268-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">iPad</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-2018/"><span>iPad 2018</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-2019-102/"><span>iPad 2019 10.2&quot;</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-air-105/"><span>iPad Air 2019</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-mini-2019/"><span>iPad Mini 5</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-pro-11/"><span>iPad Pro 11&quot;</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/ipad/ipad-pro-129/"><span>iPad Pro 12.9&quot;</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+                    <ul class="mobile-nav__categories translated-right" data-id="1266-children">
+        <li data-parent-id="1266-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">iPhone</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-11/"><span>iPhone 11</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-11-pro/"><span>iPhone 11 Pro</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-11-pro-max/"><span>iPhone 11 Pro Max</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-xs/"><span>iPhone XS</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-xs-max/"><span>iPhone XS Max</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-xr/"><span>iPhone XR</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-x/"><span>iPhone X</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-8-plus/"><span>iPhone 8 Plus</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-8/"><span>iPhone 8</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-7-plus/"><span>iPhone 7 Plus</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-7/"><span>iPhone 7</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-6s/"><span>iPhone 6S</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/iphone/iphone-se/"><span>iPhone SE</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+                    <ul class="mobile-nav__categories translated-right" data-id="1270-children">
+        <li data-parent-id="1270-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">Mac</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/macbook-pro/"><span>MacBook Pro</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/macbook-air/"><span>MacBook Air</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/macbook/"><span>MacBook 12</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/imac/"><span>iMac</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/mac-mini/"><span>Mac mini</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/mac/mac-pro/"><span>Mac Pro</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+                    <ul class="mobile-nav__categories translated-right" data-id="1269-children">
+        <li data-parent-id="1269-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">Apple Watch</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/watch/apple-watch-serias-5/"><span>Apple Watch Series 5</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/watch/apple-watch-series-4/"><span>Apple Watch Series 4</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/watch/apple-watch-series-3/"><span>Apple Watch Series 3</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+                    <ul class="mobile-nav__categories translated-right" data-id="1271-children">
+        <li data-parent-id="1271-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">Аксесуари</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/chokhli/"><span>Чохли</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/zakhisne-sklo-ta-plvki/"><span>Захисне скло та плівки</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/navushniki-ta-kolonki/"><span>Навушники та колонки</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/category_1348/"><span>Зарядні пристрої</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/kabel-ta-perekhdniki/"><span>Кабелі та перехідники</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/remapple-watch/"><span>Ремінці для Apple Watch</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/mishki-ta-klavaturi/"><span>Мишки та клавіатури</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/paverbenki/"><span>Павербенки</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/stilusi/"><span>Стилуси</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/aksesuari/bezprovdn-zaryadki-ta-trekeri/"><span>Безпровідні зарядки та трекери</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+                                <ul class="mobile-nav__categories translated-right" data-id="1300-children">
+        <li data-parent-id="1300-children" data-target-menu="1" class="has-sub mobile-nav__menu-back">
+            <i class="icon icon-right-arrow"></i> <span>Назад</span>
+        </li>
+        <li>
+            <div class="mobile-nav__title">Гаджети та музика</div>
+        </li>
+                <li class="has-link">
+            <a href="/category/gadzheti-ta-muzika/apple-tv/"><span>Apple TV</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/gadzheti-ta-muzika/airport/"><span>AirPort</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/gadzheti-ta-muzika/jbl-akustika/"><span>JBL акустика</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+                <li class="has-link">
+            <a href="/category/gadzheti-ta-muzika/ipod/"><span>iPod</span><i class="icon icon-right-arrow"></i></a>
+        </li>
+            </ul>
+    <!-- subcategories -->
+        </div>
+    
+    
+    <div class="modal-fade modal-close"></div>
+</body>
+</html>

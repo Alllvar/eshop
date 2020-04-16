@@ -1,0 +1,305 @@
+.fa-shopping-bag {
+    font-size:36px; 
+    cursor: pointer;
+}
+
+@import './media.scss';
+@import './bg-img.scss';
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+    .header-top-container {
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid rgb(231, 231, 231);
+        justify-content: center;
+        align-self: center;
+        justify-content: space-between;
+        width: 100%;
+        // @include for-tablet-landscape-up {
+
+        // }
+
+        .logo-container {
+            width: 84px;
+            height: 36px;
+            margin-right: 30px;
+
+            .logo {
+                background-image: url('../../assets/images/logo_main.png');
+                @extend %bg-img;
+            }
+        }
+
+        .logo-container:hover {
+            cursor: pointer;
+        }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 360px;
+            @include for-xs-phone-only {
+                width: 60%;
+            }
+            @include for-sm-phone-only {
+                width: 60%;
+            }
+            @include for-small-phone-only {
+                width: 60%;
+            }
+            @include for-phone-only {
+                width: 150px;
+            }
+            @include for-tablet-portrait-up {
+                width: 250px;
+            }
+            @include for-tablet-landscape-up {
+                width: 350px;
+            }
+            @include for-desktop-up {
+                width: 400px;
+            }
+            @include for-big-desktop-up {
+                width: 425px;
+            }
+
+            .search {
+                width: 100%;
+                height: 36px;
+                box-sizing: border-box;
+                padding-left: 32px;
+                padding-bottom: 3px;
+                background-color: rgb(241, 241, 241);
+                border: 1px solid rgb(241, 241, 241);
+                @include for-xs-phone-only {
+                    width: 80%;
+                }
+                @include for-sm-phone-only {
+                    width: 100%;
+                }
+                @include for-small-phone-only {
+                    width: 100%;
+                }
+                @include for-phone-only {
+                    width: 150px;
+                }
+                @include for-tablet-portrait-up {
+                    width: 250px;
+                }
+                @include for-tablet-landscape-up {
+                    width: 350px;
+                }
+                @include for-desktop-up {
+                    width: 400px;
+                }
+                @include for-big-desktop-up {
+                    width: 425px;
+                }
+            }
+            // .submit-wrap {
+            //     width: 20px;
+            //     height: 20px;
+            //     cursor: pointer;
+            //     margin-left: -417px;
+            //     margin-top: 8px;
+
+            //     .submit {
+            //         background-image: url('../images/loupe.png');
+            //         @extend %bg-img;
+            //     }
+            // }
+        }
+        .info-menu {
+            display: flex;
+            flex-direction: row;
+            margin-left: 30px;
+            margin-top: 4px;
+            margin-right: 350px;
+            @include for-xs-phone-only {
+                display: none;            
+            }
+            @include for-sm-phone-only {
+                display: none;            
+            }
+            @include for-phone-only {
+                margin-right: 20px;
+                display: flex;      
+                margin-left: 15px;      
+            }
+            @include for-tablet-landscape-up {
+                margin-right: 200px;
+                margin-left: 30px;
+
+            }
+            @include for-desktop-up {
+                margin-right: 300px;
+            }
+            @include for-big-desktop-up {
+                margin-right: 350px;
+            }
+            .hightligh a{
+                border: 1px solid rgb(225, 38, 29);
+            }
+
+            .info-menu-item a {
+                color: rgb(225, 38, 29);
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                display: inline-block;
+                padding: 1px 5px 4px 5px;
+                border-radius: 3px;
+                margin-right: 6px;
+                @include for-phone-only {
+                    margin-right: 3px;
+                }
+                @include for-tablet-landscape-up {
+                    margin-right: 6px;
+                }
+            }
+            .info-menu-item a:hover {
+                background-color: rgb(225, 38, 29);
+                color: rgb(255, 255, 255);
+            }
+        }
+        .header-icon-container {
+            width: 26px;
+            height: 26px;
+            .header-icon {
+               background-image: url('../../assets/images/shopping-bags-png-black-and-white-png-file-svg-884.png');
+                @extend %bg-img;
+            }
+        }
+    }
+
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        .menu-container {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-left: 25px;
+            @include for-xs-phone-only {
+                margin-left: 0;
+            }
+            @include for-sm-phone-only {
+                margin-left: 0;
+            }
+     
+            .menu-item {
+                height: 60px;
+                line-height: 60px;
+            }
+
+            .menu-item:hover {
+                background-color: rgb(244, 244, 244);
+                cursor: pointer;
+            }
+
+            .menu-item a {
+                text-decoration: none;
+                padding: 0 15px;
+                font-size: 16px;
+                color: rgb(40, 40, 54);
+                letter-spacing: 1px;
+            }
+            .menu-item a:hover {
+                color: rgb(225, 38, 29);
+            }
+        }
+        .online-chat-container {
+            font-size: 10px;
+            letter-spacing: .2px;
+            font-weight: 600;
+            font-family: SF Pro Display;
+            color: rgb(225, 38, 29);
+            height: 60px;
+            line-height: 60px;
+            margin-left: 360px;
+            width: 90px;
+            text-align: center;
+            @include for-xs-phone-only {
+                margin-left: 10px;
+                display: none;
+            }
+            @include for-sm-phone-only {
+                display: none;
+            }
+            @include for-small-phone-only {
+                margin-left: 10px;
+            }
+            @include for-phone-only {
+                margin-left: 10px;
+            }
+            @include for-tablet-portrait-up {
+                margin-left: 160px;
+            }
+            @include for-tablet-landscape-up {
+                margin-left: 200px;
+            }
+            @include for-desktop-up {
+                margin-left: 360px;
+                display: block;
+
+            }
+            @include for-big-desktop-up {
+                margin-left: 360px;
+            }
+        }
+        .online-chat-container:hover {
+            background-color: rgb(244, 244, 244);
+            cursor: pointer;
+        }
+        .header-phone-container {
+            width: 210px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            @include for-xs-phone-only {
+                display: none;
+            }
+            @include for-sm-phone-only {
+                display: none;
+            }
+            @include for-small-phone-only {
+            }
+            @include for-desktop-up {
+                margin-left: 60px;
+                display: block;
+            }
+            .header-phone-header {
+                font-size: 10px;
+                letter-spacing: .2px;
+                font-weight: 600;
+                font-family: SF Pro Display;
+                color: rgb(225, 38, 29);
+                align-self: flex-end;
+                margin-right: 20px;
+                margin-top: 10px;
+            }
+            .header-phone {
+                align-self: flex-end;
+                margin-right: 20px;
+                font-size: 16px;
+                font-family: SF Pro Display;
+                font-weight: 700;
+                color: rgb(40, 40, 54);
+                border-bottom: 1px dashed;
+                display: inline-block;
+            }
+        }
+        .header-phone-container:hover {
+            background-color: rgb(244, 244, 244);
+            cursor: pointer;
+        }
+    }
+}
