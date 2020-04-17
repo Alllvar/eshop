@@ -6,6 +6,8 @@ import {
 import  ProductPage from '../components/product-page';
 import Header from './header/index';
 import Footer from './footer/index';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 
 class App extends React.Component {
@@ -16,9 +18,9 @@ class App extends React.Component {
                 <div>
                     <Header />
                     <div className="page-wrapper">
-                            <div className="page">
-                                <Route path='/product-page' component={ProductPage} />
-                            </div>
+                        <div className="page">
+                            <Route path='/product-page' component={ProductPage} />
+                        </div>
                     </div>
                     <Footer />
                 </div>

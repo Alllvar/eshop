@@ -33,7 +33,7 @@ class Header extends React.Component {
                 </div>
             </div>
             <div className="header-icon-wrap">
-                <i class="fa fa-shopping-bag"></i>
+                <i className="fa fa-shopping-bag"></i>
             </div>
         </div>
         <div className="header-menu">
