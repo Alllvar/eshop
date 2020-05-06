@@ -1,0 +1,217 @@
+@import './media.scss';
+@import './bg-img.scss';
+
+.homepage-categories-container {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    .categories-row {
+        display: flex;
+        flex-direction: row;
+        @include for-xs-phone-only {
+            flex-direction: column;
+        }
+        @include for-sm-phone-only {
+            flex-direction: column;
+        }
+        @include for-tablet-portrait-up {
+            flex-direction: row;        
+        }
+        .categories-element {
+            padding: 20px;
+            width: 455px;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            margin: 1px 1px;
+            @include for-xs-phone-only {
+                width: 255px;
+            }
+            @include for-sm-phone-only {
+                width: 355px;
+            }
+            @include for-small-phone-only {
+                width: 530px;
+            }
+            @include for-phone-only {
+                width: 680px;
+            }
+            @include for-tablet-portrait-up {
+                width: 305px;
+            }
+            @include for-tablet-landscape-up {
+                width: 355px;
+            }
+            @include for-desktop-up {
+                width: 405px;
+            }
+            @include for-big-desktop-up {
+                width: 455px;
+            }
+
+            .categories-img-wrap {
+                width: 108px;
+                height: 108px;
+
+                .categories-img {
+                    @extend %bg-img;
+                }
+            }
+
+            .categories-name {
+                font-size: 24px;
+                color: rgb(46, 45, 44);
+                display: block;
+                font-weight: 600;
+                margin-left: 40px;
+                width: 60%;
+            }
+        }
+        .categories-element:hover {
+            box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+            transition: .3s;    
+            cursor: pointer;    
+            background-color: white;
+        }
+    }
+}
+
+.homepage-product-container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    padding-left: 5%;
+    margin-bottom: 50px;
+    height: 100%;
+
+    background-color: rgb(241, 241, 241);
+    
+    .product-carousel-container {
+        width: 50%;
+        background-color: white;
+        @include for-xs-phone-only {
+            display: none;
+
+        }
+        @include for-sm-phone-only {
+            display: none;
+        }
+        @include for-tablet-landscape-up {
+            display: block;
+        }
+        .product-img-wrap {
+            width: 645px;   
+            
+            .product-img {
+                @extend %bg-img;
+            }
+        }
+    }
+    .product-items-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        width: 50%;
+        padding-bottom: 30px;
+        @include for-xs-phone-only {
+            width: 100%;
+
+        }
+        @include for-sm-phone-only {
+            width: 100%;
+
+        }
+        @include for-tablet-landscape-up {
+            width: 50%;
+        }
+
+        .product-item-container {
+            width: 50%;
+            .product-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                .product-item-img-wrap {
+                    margin-top: 15px;
+                    width: 200px;
+                    height: 200px;
+                    @include for-xs-phone-only {
+                        width: 150px;
+                        height: 150px;
+                    }
+                    @include for-sm-phone-only {
+                        width: 150px;
+                        height: 150px;
+                    }
+                    @include for-small-phone-only {
+                        
+                    }
+                    @include for-phone-only {
+                        width: 250px;
+                        height: 250px;
+                    }
+                    @include for-tablet-landscape-up {
+                        width: 200px;
+                        height: 200px;
+                    }
+                    .product-item-img {
+                        @extend %bg-img;
+                    }
+                }
+                .product-item-name a{
+                    text-decoration: none;
+                    font-family: SF Pro Display;
+                    color: rgb(0, 0, 0);
+                    font-weight: 600;
+                    margin-top: 23px;   
+                    text-align: center;
+                    @include for-xs-phone-only {
+                        font-size: 12px;
+                    }
+                    @include for-sm-phone-only {
+                        font-size: 14px;
+                    }
+                    @include for-small-phone-only {
+                        font-size: 18px;
+                    }
+                }
+                .product-item-name a:hover{
+                    color: red;
+                }
+                .product-item-price {
+                    font-size: 20px;
+                    font-weight: 300;
+                    font-family: SF Pro Display;
+                    color: rgb(0, 0, 0);
+                    padding-top: 5px;
+                    @include for-xs-phone-only {
+                        font-size: 12px;
+                    }
+                    @include for-sm-phone-only {
+                        font-size: 14px;
+                    }
+                    @include for-small-phone-only {
+                        font-size: 18px;
+                    }
+                }
+                .product-item-btn { 
+                    background: rgb(228, 36, 13);
+                    border-radius: 4px;
+                    color: rgb(255, 255, 255);
+                    border: none;
+                    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+                    text-shadow: 0 1px 3px rgba(0,0,0,.2);
+                    padding: 4px 15px 5px 15px;
+                    margin-top: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

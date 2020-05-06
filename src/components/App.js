@@ -3,10 +3,10 @@ import {
     BrowserRouter as Router,
     Route
 } from 'react-router-dom';
-import  ProductPage from '../components/product-page';
+import ProductPage from '../components/product-page';
+import IndexPage from '../components/index-page';
 import Header from './header/index';
 import Footer from './footer/index';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
 
@@ -19,7 +19,9 @@ class App extends React.Component {
                     <Header />
                     <div className="page-wrapper">
                         <div className="page">
-                            <Route path='/product-page' component={ProductPage} />
+                            {/* <Route path='/product-page' component={ProductPage} /> */}
+                            <ProductPage />
+                            <IndexPage />
                         </div>
                     </div>
                     <Footer />

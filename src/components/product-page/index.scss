@@ -1,0 +1,435 @@
+@import './media.scss';
+@import './bg-img.scss';
+
+body {
+    overflow-x: hidden;
+}
+.product-section {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 60px;
+
+    .top-container {
+        display: flex;
+        flex-direction: row;
+        padding: 25px 0;
+
+        .top-container-navigation {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            margin-left: 45px;
+            margin-bottom: 0;
+
+            .top-container-navigation-element {
+                // padding: 0 12px;
+                font-family: SF Pro Display;
+                font-size: 12px;
+                font-weight: 400;
+                color: rgb(149, 149, 149);
+                    margin: 0 12px;
+
+                .top-container-navigation-element-link { 
+                    text-decoration: none;
+                    color: #282836;
+                }   
+                .top-container-navigation-element-link:hover {
+                    color: rgb(225, 38, 29);
+                }
+                // .top-container-navigation-element-link::after {
+                //     content: "/";
+                //     margin: 0 12px;
+                //     font-size: 20px;
+                //     color: rgb(154, 154, 154);
+                // }
+                .product-name {
+                    font-family: SF Pro Display;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: rgb(149, 149, 149);
+                }
+            }
+        }
+    }   
+    .product-section-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include for-xs-phone-only {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include for-sm-phone-only {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include for-tablet-portrait-up {
+            flex-direction: row;
+        }
+
+        .product-section-left-container {
+            background-color: white;
+            width: 570px;
+            height: 854px;
+            display: flex;
+            justify-content: center;
+            @include for-xs-phone-only {
+                width: 100%;
+                height: 854px;
+            }
+            @include for-sm-phone-only {
+                width: 767px;
+                height: 654px;
+
+            }
+            @include for-tablet-portrait-up {
+                width: 570px;
+                height: 854px;
+            }
+
+            .product-image-wrap {
+                width: 539px;
+                height: 638px;
+                @include for-tablet-portrait-up {
+                    width: 459px;
+                    height: 558px;
+                }
+                @include for-tablet-landscape-up {
+                    width: 539px;
+                    height: 638px;
+                }
+                .product-image {
+                    background-image: url('../../assets/images/iPhone.png');
+                    @extend %bg-img;
+                }
+            }
+        }
+        .product-section-right-container {
+            width: 767px;
+            background-color: white;
+            height: 854px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            padding: 27px 35px 40px;
+            @include for-xs-phone-only {
+                margin-left: 0;
+                height: auto;
+            }
+            @include for-sm-phone-only {
+                margin-left: 0;
+                height: auto;
+            }
+            @include for-tablet-portrait-up {
+                margin-left: 15px;
+                height: 854px;
+            }
+
+            .product-name-title {
+                font-size: 32px;
+                font-family: SF Pro Display;
+                font-weight: 600;
+                letter-spacing: .5px;
+                color: rgb(0, 0, 0);
+                @include for-xs-phone-only {
+                    align-self: center;                
+                }
+                @include for-sm-phone-only {
+                    align-self: center;                
+                }
+                @include for-tablet-landscape-up {
+                    align-self: auto;
+                }
+            }
+            .color-container {
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+                @include for-xs-phone-only {
+                    align-self: center;
+                }
+                @include for-sm-phone-only {
+                    align-self: center;
+
+                }
+                @include for-tablet-portrait-up {
+                    align-self: center;
+
+                }
+
+                .color-title {
+                    margin-top: 8px;
+                    letter-spacing: .8px;
+                    font-size: 12px;
+                    color: rgb(0, 0, 0);
+                }
+                .colors-section-wrap {
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 5px;
+                    @include for-xs-phone-only {
+                        flex-direction: column;            
+                    }
+                    @include for-sm-phone-only {
+                        flex-direction: row;
+                    }
+                    @include for-tablet-landscape-up {
+                        flex-direction: row;
+                    }
+
+                    .color-items-wrap {
+                        display: flex;
+                        @include for-xs-phone-only {
+                            flex-direction: column;            
+                        }
+                        @include for-sm-phone-only {
+                            flex-direction: column;
+                        }
+                        @include for-tablet-landscape-up {
+                            flex-direction: row;
+                        }
+                        .color-item-wrap {
+                            margin: 0 10px;
+                            display: flex;
+                            flex-direction: row;
+                            .color {
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                border: 3px solid rgb(241, 241, 241);
+                            }
+                            .color-name {
+                                font-size: 12px;
+                                margin-top: 4px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .memory-container {
+                display: flex;
+                flex-direction: row;
+                margin-top: 50px;
+                @include for-xs-phone-only {
+                    align-self: center;                
+                }
+                @include for-sm-phone-only {
+                    align-self: center;                
+                }
+                @include for-tablet-landscape-up {
+                    align-self: auto;
+                }
+
+                .memory-title {
+                    letter-spacing: .8px;
+                    font-size: 12px;
+                    color: rgb(0, 0, 0);
+                }
+                .memory-items-wrap {
+                    display: flex;
+                    flex-direction: row;
+
+                    .memory-item {
+                        font-size: 11px;
+                        padding: 0 7px;
+                        display: flex;
+                        align-items: center;
+                        border: 2px solid rgb(40, 40, 54);
+                        color: rgb(40, 40, 54);
+                        font-weight: 900;
+                        text-align: center;
+                        border-radius: 7px;
+                        font-family: SF Pro Display;
+                        background-color: rgb(255, 255, 255);
+                        margin-left: 17px;
+                        letter-spacing: .8px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .product-price-container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+                @include for-xs-phone-only {
+                    align-self: center;                
+                }
+                @include for-sm-phone-only {
+                    align-self: center;                
+                }
+                @include for-tablet-landscape-up {
+                    align-self: auto;
+                }
+
+                .product-price-ua {
+                    font-size: 42px;
+                    font-weight: 900;
+                    color: rgb(59, 156, 49);
+                    padding-left: 25px;
+                }
+                .product-price-us {
+                    font-size: 14px;
+                    color: rgb(0, 0, 0);
+                    line-height: 1.5;
+                    padding-left: 30px;
+                    font-weight: 600;
+                    margin-top: 5px;
+                }
+            }
+            .product-services-header-wrap {
+                border-top: 1px solid rgb(232, 232, 231);
+                margin-top: 40px;
+                margin-bottom: 40px;
+                position: relative;
+
+                .product-services-header{
+                    background: rgb(255, 255, 255);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    padding: 10px 40px;
+                    margin-right: -50%;
+                    transform: translate(-50%,-50%);
+                    letter-spacing: .2px;
+                    color: rgb(0, 0, 0);
+                    font-family: SF Pro Display;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+            .product-services-container {
+                display: flex;
+
+                .product-services-info-wrap {
+                    // justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    .product-services-info-title {
+                        color: rgb(0, 0, 0);
+                        font-size: 12px;
+                        font-family: SF Pro Display;
+                        letter-spacing: .2;
+                        padding: 6px 0;
+                    }
+                    .product-services-info {
+                        font-family: SF Pro Display;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .product-card-two-btn {
+                margin-top: 40px;
+    
+
+                .buy-button {
+                    min-width: 302px;
+                    min-height: 64px;
+                    border: none;
+                    font-size: 22px;
+                    font-weight: 700;
+                    font-family: SF Pro Display;
+                    color: rgb(255, 255, 255);
+                    padding: 0 10px;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: rgb(225, 38, 29);
+                    border-radius: 7px;
+                    @include for-xs-phone-only {
+                        min-width: 252px;
+                        margin-bottom: 10px;
+                    }
+                    @include for-sm-phone-only {
+                        min-width: 252px;
+                        margin-bottom: 10px;
+                    }
+                    @include for-tablet-portrait-up {
+                        min-width: 302px;
+                        margin-bottom: 0;
+                    }
+                }
+                .credit-button {
+                    min-width: 302px;
+                    min-height: 64px;
+                    background: rgb(73, 73, 98);
+                    border: none;
+                    font-weight: 700;
+                    font-family: SF Pro Display;
+                    color: rgb(255, 255, 255);
+                    font-size: 17px;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+                    text-shadow: 0 1px 3px rgba(0,0,0,.2);
+                    border-radius: 7px;
+                    @include for-xs-phone-only {
+                        min-width: 252px;
+                    }
+                    @include for-sm-phone-only {
+                        min-width: 252px;
+                    }
+                    @include for-tablet-portrait-up {
+                        min-width: 302px;
+                    }
+                }
+            }
+        }
+    }
+    .product-tabs-container {
+        margin-top: 15px;
+        background-color: white;
+        padding: 43px 0 63px;
+        width: 1355px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .product-tabs-list {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+
+            .product-tab a {
+                cursor: pointer;
+                font-family: SF Pro Display;
+                font-size: 18px;
+                color: rgb(40, 40, 54);
+                font-weight: 600;
+                padding: 0 14px;
+                min-height: 33px;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                align-items: center;
+                text-decoration: none;
+                margin: 0 20px;
+            }
+        }
+        .product-tabs-title {
+            margin-top: 25px;
+            font-weight: bold;
+        }
+        .features {
+            width: 600px;
+            max-width: 100%;
+            margin: 20px auto;
+            .features-table {
+                .features-row {
+                    height: 60px;
+                    .feature-name {
+                        padding-left: 30px;
+                    }
+                    .feature-value {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
