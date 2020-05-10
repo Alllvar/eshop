@@ -7,7 +7,8 @@ import ProductPage from '../components/product-page';
 import IndexPage from '../components/index-page';
 import Header from './header/index';
 import Footer from './footer/index';
-import './App.scss';
+import Cart from './cart/index';
+import './app.scss';
 
 
 class App extends React.Component {
@@ -20,8 +21,9 @@ class App extends React.Component {
                     <div className="page-wrapper">
                         <div className="page">
                             {/* <Route path='/product-page' component={ProductPage} /> */}
-                            <ProductPage />
-                            <IndexPage />
+                            {/* <ProductPage /> */}
+                            {/* <IndexPage /> */}
+                            <Cart />
                         </div>
                     </div>
                     <Footer />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FOOTER_NAV_LIST, FOOTER_NAV_INFO, CONTACT_US_NUMBERS } from '../../constants/index';
 
-import './index.scss';
+import '../../styles/footer/index.scss';
 
 class Footer extends React.Component {
     handleFooterNavList = ({id, href, text}) => {

@@ -1,10 +1,10 @@
+@import '../media/media.scss';
+@import '../bg-img/bg-img.scss';
+
 .fa-shopping-bag {
     font-size:36px; 
     cursor: pointer;
 }
-
-@import './media.scss';
-@import './bg-img.scss';
 
 .header {
     display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { COLOR_ITEM1, COLOR_ITEM2, MEMORY_ITEM, PRODUCT_SERVICES_INFO, PRODUCT_TABS, FEATURES_TABLE } from '../../constants/index';
-import './index.scss';
+import '../../styles/product-page/index.scss';
 
 class ProductPage extends React.Component {
     handleColorItem = ({id, color, text}) => {

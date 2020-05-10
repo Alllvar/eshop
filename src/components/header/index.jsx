@@ -1,6 +1,7 @@
 import React from 'react';
 import { HEADER_MENU_CONTENT, INFO_MENU_ITEM } from '../../constants/index';
-import './index.scss';
+import '../../styles/header/index.scss';
+
 
 class Header extends React.Component {
     handleMenuItem = ({id, href, text}) => {

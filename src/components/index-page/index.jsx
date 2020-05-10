@@ -1,9 +1,7 @@
 import React from 'react';
-import { CATEGORIES_CONTENT1 } from '../../constants/index';
-import { CATEGORIES_CONTENT2 } from '../../constants/index';
-import { PRODUCT_ITEM } from '../../constants/index';
+import { CATEGORIES_BOTTOM_CONTENT, CATEGORIES_TOP_CONTENT, PRODUCT_ITEM } from '../../constants/index';
 import iPhone2 from '../../assets/images/iPhone2.png';
-import './index.scss';
+import '../../styles/index-page/index.scss';
 
 class IndexPage extends React.Component {
     handleItem = ({id, img, text}) => {
@@ -39,10 +37,10 @@ class IndexPage extends React.Component {
             <div>
                 <section className="homepage-categories-container">
                     <div className="categories-row">
-                        {CATEGORIES_CONTENT1.map(this.handleItem)}
+                        {CATEGORIES_TOP_CONTENT.map(this.handleItem)}
                     </div>
                     <div className="categories-row">
-                        {CATEGORIES_CONTENT2.map(this.handleItem)}
+                        {CATEGORIES_BOTTOM_CONTENT.map(this.handleItem)}
                     </div>
                 </section>
                 <section className="homepage-product-container">
