@@ -5,17 +5,12 @@
 .checkbox-element {
     background: rgb(234, 234, 234);
     border-radius: 3px;
-    position: relative;
     height: 20px;
     width: 20px;
 }
 .cart-container {
     background-color: white;
-    height: auto;
-    display: flex;
-
     .product-container {
-        padding: 40px 0;
         .img-wrap {
             width: 175px;
             height: 175px;
@@ -24,7 +19,6 @@
             }
         }
         .properties-wrap {
-            margin-left: 50px;
             .product-name a {
                 color: black;
                 text-decoration: none;
@@ -36,39 +30,23 @@
             .cart-form {
                 width: 250px;
                 .element-container {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
                     .property-name {
                         font-size: 16px;
-                        margin-bottom: 0;
-                    }
-                    .checkbox-element {
-                        margin-left: 15px;
                     }
                 }
             }
         }
-
         .close-btn {
             float: right;
         }
     }
 
     .order-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 40px 0;
-        .total {
-            margin-bottom: 15px;
-        }
         .total-price {
             font-size: 24px;
             font-weight: 700;
             color: rgb(0, 128, 0);
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
         }
         .to-order-btn  {
             background: rgb(228, 36, 13);
@@ -77,7 +55,6 @@
             border: none;
             box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
             text-shadow: 0 1px 3px rgba(0,0,0,.2);
-            padding: 5px;
         }
     }
 }

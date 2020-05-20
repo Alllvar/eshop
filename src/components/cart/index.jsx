@@ -17,31 +17,31 @@ class Cart extends React.Component {
 
     render() {
         return (
-            <section className="cart-container justify-content-center container">
-                <div className="col-md-8 product-container row">
-                    <div className="img-wrap">
+            <section className="cart-container justify-content-center container d-flex h-auto">
+                <div className="col-md-8 product-container py-5 row">
+                    <div className="img-wrap col-md-3 col-sm-6">
                         <img src={iPhoneXR} className="img" />
                     </div>
-                    <div className="properties-wrap">
+                    <div className="properties-wrap col-md-9 col-sm-6">
                         <div className="product-name">
                             <a href="#">iPhone XR 64GB (Black)</a>
                         </div>
                         <form className="cart-form mt-3">
-                            <div className="element-container">
-                                <label className="property-name" for="1">Гарантія на дисплей (+$67)</label>
-                                <input className="checkbox-element" type="checkbox" id="1" name="1" />
+                            <div className="element-container d-flex flex-row align-items-center justify-content-between">
+                                <label className="property-name mb-0" for="1">Гарантія на дисплей (+$67)</label>
+                                <input className="checkbox-element position-relative" type="checkbox" id="1" name="1" />
                             </div><br/>
-                            <div className="element-container">
-                                <label className="property-name" for="2">Налаштування (+$18)</label>
-                                <input className="checkbox-element" type="checkbox" id="2" name="2" />
+                            <div className="element-container d-flex flex-row align-items-center justify-content-between">
+                                <label className="property-name mb-0" for="2">Налаштування (+$18)</label>
+                                <input className="checkbox-element position-relative" type="checkbox" id="2" name="2" />
                             </div><br/>
-                            <div className="element-container">
-                                <label className="property-name" for="3">Додаткова гарантія</label>
-                                <input className="checkbox-element" type="checkbox" id="3" name="3" />
+                            <div className="element-container d-flex flex-row align-items-center justify-content-between">
+                                <label className="property-name mb-0" for="3">Додаткова гарантія</label>
+                                <input className="checkbox-element position-relative" type="checkbox" id="3" name="3" />
                             </div><br/>
-                            <div className="element-container">
-                                <label className="property-name" className="" for="4">Захисне скло (+$5)</label>
-                                <input className="checkbox-element" type="checkbox" id="4" name="4" />
+                            <div className="element-container d-flex flex-row align-items-center justify-content-between">
+                                <label className="property-name mb-0" className="" for="4">Захисне скло (+$5)</label>
+                                <input className="checkbox-element position-relative" type="checkbox" id="4" name="4" />
                             </div><br/>
                             <div className="d-flex  justify-content-between">
                                 <div className="select-container d-flex">
@@ -59,10 +59,10 @@ class Cart extends React.Component {
                         </form>
                     </div>
                 </div>
-                <div className="col-md-4 order-container">
-                    <div className="total">Всього:</div>
-                    <div className="total-price">$669</div>
-                    <button className="to-order-btn">Оформити замовлення</button>
+                <div className="col-md-4 order-container py-5 d-flex flex-column align-items-end">
+                    <div className="total mb-3">Всього:</div>
+                    <div className="total-price mb-5">$669</div>
+                    <button className="to-order-btn p-2">Оформити замовлення</button>
                 </div>
             </section>
         )

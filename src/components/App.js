@@ -10,6 +10,7 @@ import Footer from './footer/index';
 import Cart from './cart/index';
 import './app.scss';
 
+// const history = createBrowserHistory();
 
 class App extends React.Component {
     render() {
@@ -20,10 +21,9 @@ class App extends React.Component {
                     <Header />
                     <div className="page-wrapper">
                         <div className="page">
-                            {/* <Route path='/product-page' component={ProductPage} /> */}
-                            {/* <ProductPage /> */}
-                            {/* <IndexPage /> */}
-                            <Cart />
+                            <Route exact path='/' component={IndexPage} />
+                            <Route path='/product-page' component={ProductPage} />
+                            <Route path='/cart' component={Cart} />
                         </div>
                     </div>
                     <Footer />

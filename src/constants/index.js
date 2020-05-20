@@ -9,8 +9,7 @@ import iPhone8 from '../assets/images/iPhone8.jpg';
 import iPhoneXR from '../assets/images/iPhoneXR.jpeg';
 import appleWatchSeries from '../assets/images/appleWatchSeries.jpg';
 
-
-export const CATEGORIES_TOP_CONTENT = [
+export const CATEGORIES_CONTENT = [
     {
         id: 1,
         img: iPad,
@@ -25,10 +24,7 @@ export const CATEGORIES_TOP_CONTENT = [
         id: 3,
         img: macbooks,
         text: 'Mac'
-    }
-]
-
-export const CATEGORIES_BOTTOM_CONTENT = [
+    },
     {
         id: 4,
         img: AppleWatch,

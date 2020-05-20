@@ -3,13 +3,8 @@
 
 .homepage-categories-container {
     padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: rgb(241, 241, 241);
     .categories-row {
-        display: flex;
-        flex-direction: row;
         @include for-xs-phone-only {
             flex-direction: column;
         }
@@ -23,11 +18,8 @@
             padding: 20px;
             width: 455px;
             height: 150px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             background-color: white;
-            margin: 1px 1px;
+            margin: 1px;
             @include for-xs-phone-only {
                 width: 255px;
             }
@@ -65,7 +57,6 @@
             .categories-name {
                 font-size: 24px;
                 color: rgb(46, 45, 44);
-                display: block;
                 font-weight: 600;
                 margin-left: 40px;
                 width: 60%;
@@ -81,21 +72,15 @@
 }
 
 .homepage-product-container {
-    display: flex;
-    width: 90%;
     flex-direction: row;
     padding-left: 5%;
     margin-bottom: 50px;
-    height: 100%;
-
     background-color: rgb(241, 241, 241);
     
     .product-carousel-container {
-        width: 50%;
         background-color: white;
         @include for-xs-phone-only {
             display: none;
-
         }
         @include for-sm-phone-only {
             display: none;
@@ -112,30 +97,20 @@
         }
     }
     .product-items-container {
-        display: flex;
-        flex-wrap: wrap;
         background-color: white;
-        width: 50%;
         padding-bottom: 30px;
         @include for-xs-phone-only {
             width: 100%;
-
         }
         @include for-sm-phone-only {
             width: 100%;
-
         }
         @include for-tablet-landscape-up {
             width: 50%;
         }
 
         .product-item-container {
-            width: 50%;
             .product-item {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 cursor: pointer;
                 .product-item-img-wrap {
                     margin-top: 15px;
@@ -148,9 +123,6 @@
                     @include for-sm-phone-only {
                         width: 150px;
                         height: 150px;
-                    }
-                    @include for-small-phone-only {
-                        
                     }
                     @include for-phone-only {
                         width: 250px;
