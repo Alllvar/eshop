@@ -1,5 +1,6 @@
 @import '../media/media.scss';
 @import '../bg-img/bg-img.scss';
+@import '../colors/colors.scss';
 
 .fa-shopping-bag {
     font-size:36px; 
@@ -9,7 +10,7 @@
 .header {
 
     .header-top-container {
-        border-bottom: 1px solid rgb(231, 231, 231);
+        border-bottom: 1px solid $almost-white;
         justify-content: space-between;
 
         .logo-container {
@@ -58,8 +59,8 @@
                 height: 36px;
                 box-sizing: border-box;
                 padding-left: 32px;
-                background-color: rgb(241, 241, 241);
-                border: 1px solid rgb(241, 241, 241);
+                background-color: $almost-white;
+                border: 1px solid $almost-white;
                 @include for-xs-phone-only {
                     width: 80%;
                 }
@@ -109,11 +110,11 @@
                 margin-right: 350px;
             }
             .hightligh a{
-                border: 1px solid rgb(225, 38, 29);
+                border: 1px solid $red;
             }
 
             .info-menu-item a {
-                color: rgb(225, 38, 29);
+                color: $red;
                 text-decoration: none;
                 font-size: 13px;
                 font-weight: 600;
@@ -129,8 +130,8 @@
                 }
             }
             .info-menu-item a:hover {
-                background-color: rgb(225, 38, 29);
-                color: rgb(255, 255, 255);
+                background-color: $red;
+                color: $white;
             }
         }
         .header-icon-container {
@@ -160,7 +161,7 @@
             }
 
             .menu-item:hover {
-                background-color: rgb(244, 244, 244);
+                background-color: $almost-white;
                 cursor: pointer;
             }
 
@@ -168,11 +169,11 @@
                 text-decoration: none;
                 padding: 0 15px;
                 font-size: 16px;
-                color: rgb(40, 40, 54);
+                color: $dark-blue;
                 letter-spacing: 1px;
             }
             .menu-item a:hover {
-                color: rgb(225, 38, 29);
+                color: $red;
             }
         }
         .online-chat-container {
@@ -180,7 +181,7 @@
             letter-spacing: .2px;
             font-weight: 600;
             font-family: SF Pro Display;
-            color: rgb(225, 38, 29);
+            color: $red;
             height: 60px;
             line-height: 60px;
             width: 90px;
@@ -212,10 +213,10 @@
             }
         }
         .online-chat-container:hover {
-            background-color: rgb(244, 244, 244);
+            background-color: $almost-white;
             cursor: pointer;
         }
-        .header-phone-container {
+        .phone-container {
             width: 210px;
             height: 60px;
             @include for-xs-phone-only {
@@ -233,22 +234,22 @@
                 letter-spacing: .2px;
                 font-weight: 600;
                 font-family: SF Pro Display;
-                color: rgb(225, 38, 29);
+                color: $red;
                 margin-right: 20px;
                 margin-top: 10px;
             }
-            .header-phone {
+            .number {
                 margin-right: 20px;
                 font-size: 16px;
                 font-family: SF Pro Display;
                 font-weight: 700;
-                color: rgb(40, 40, 54);
+                color: $dark-blue;
                 border-bottom: 1px dashed;
                 display: inline-block;
             }
         }
-        .header-phone-container:hover {
-            background-color: rgb(244, 244, 244);
+        .phone-container:hover {
+            background-color: $almost-white;
             cursor: pointer;
         }
     }

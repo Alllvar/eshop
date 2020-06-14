@@ -1,5 +1,6 @@
 @import '../media/media.scss';
 @import '../bg-img/bg-img.scss';
+@import '../colors/colors.scss';
 
 
 .checkbox-element {
@@ -25,7 +26,7 @@
                 font-size: 22px;
             }
             .product-name a:hover {
-                color: red;
+                color: $red;
             }
             .cart-form {
                 width: 250px;
@@ -49,7 +50,7 @@
             // margin-bottom: 40px;
         }
         .to-order-btn  {
-            background: rgb(228, 36, 13);
+            background: $red;
             border-radius: 4px;
             color: rgb(255, 255, 255);
             border: none;

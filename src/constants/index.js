@@ -103,7 +103,7 @@ export const INFO_MENU_ITEM = [
     }
 ]
 
-export const COLOR_ITEM1 = [
+export const COLOR_ITEM = [
     {
         id: 1,
         color: {backgroundColor: '#000000'},
@@ -117,11 +117,8 @@ export const COLOR_ITEM1 = [
     {
         id: 3,
         color: {backgroundColor: '#A70213'},
-        text: '(PRODUCT) Red'
-    }
-]
-
-export const COLOR_ITEM2 = [
+        text: 'Red'
+    },
     {
         id: 4,
         color: {backgroundColor: '#9EEDA5'},
@@ -138,6 +135,24 @@ export const COLOR_ITEM2 = [
         text: 'Purple'
     }
 ]
+
+// export const COLOR_ITEM = [
+//     {
+//         id: 4,
+//         color: {backgroundColor: '#9EEDA5'},
+//         text: 'Green'
+//     },
+//     {
+//         id: 5,
+//         color: {backgroundColor: '#F5E645'},
+//         text: 'Yellow'
+//     },
+//     {
+//         id: 6,
+//         color: {backgroundColor: '#E4ADF8'},
+//         text: 'Purple'
+//     }
+// ]
 
 export const PRODUCT_ITEM = [
     {

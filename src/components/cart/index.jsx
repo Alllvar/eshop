@@ -19,31 +19,31 @@ class Cart extends React.Component {
         return (
             <section className="cart-container justify-content-center container d-flex h-auto">
                 <div className="col-md-8 product-container py-5 row">
-                    <div className="img-wrap col-md-3 col-sm-6">
-                        <img src={iPhoneXR} className="img" />
+                    <div className="img-wrap col-sm-6 col-md-3">
+                        <img src={iPhoneXR} className="img" alt="iPhoneXR" />
                     </div>
-                    <div className="properties-wrap col-md-9 col-sm-6">
+                    <div className="properties-wrap col-sm-6 col-md-9">
                         <div className="product-name">
                             <a href="#">iPhone XR 64GB (Black)</a>
                         </div>
                         <form className="cart-form mt-3">
                             <div className="element-container d-flex flex-row align-items-center justify-content-between">
-                                <label className="property-name mb-0" for="1">Гарантія на дисплей (+$67)</label>
+                                <label className="property-name mb-0" htmlFor="1">Гарантія на дисплей (+$67)</label>
                                 <input className="checkbox-element position-relative" type="checkbox" id="1" name="1" />
                             </div><br/>
                             <div className="element-container d-flex flex-row align-items-center justify-content-between">
-                                <label className="property-name mb-0" for="2">Налаштування (+$18)</label>
+                                <label className="property-name mb-0" htmlFor="2">Налаштування (+$18)</label>
                                 <input className="checkbox-element position-relative" type="checkbox" id="2" name="2" />
                             </div><br/>
                             <div className="element-container d-flex flex-row align-items-center justify-content-between">
-                                <label className="property-name mb-0" for="3">Додаткова гарантія</label>
+                                <label className="property-name mb-0" htmlFor="3">Додаткова гарантія</label>
                                 <input className="checkbox-element position-relative" type="checkbox" id="3" name="3" />
                             </div><br/>
                             <div className="element-container d-flex flex-row align-items-center justify-content-between">
-                                <label className="property-name mb-0" className="" for="4">Захисне скло (+$5)</label>
+                                <label className="property-name mb-0" className="" htmlFor="4">Захисне скло (+$5)</label>
                                 <input className="checkbox-element position-relative" type="checkbox" id="4" name="4" />
                             </div><br/>
-                            <div className="d-flex  justify-content-between">
+                            <div className="d-flex justify-content-between">
                                 <div className="select-container d-flex">
                                     <div className="amount mr-2">К-сть:</div>
                                     <select>

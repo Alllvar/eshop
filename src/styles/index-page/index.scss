@@ -1,9 +1,10 @@
 @import '../media/media.scss';
 @import '../bg-img/bg-img.scss';
+@import '../colors/colors.scss';
 
 .homepage-categories-container {
     padding: 100px 0;
-    background-color: rgb(241, 241, 241);
+    background-color: $almost-white;
     .categories-row {
         @include for-xs-phone-only {
             flex-direction: column;
@@ -18,7 +19,7 @@
             padding: 20px;
             width: 455px;
             height: 150px;
-            background-color: white;
+            background-color: $white;
             margin: 1px;
             @include for-xs-phone-only {
                 width: 255px;
@@ -45,16 +46,16 @@
                 width: 455px;
             }
 
-            .categories-img-wrap {
+            .img-wrap {
                 width: 108px;
                 height: 108px;
 
-                .categories-img {
+                .img {
                     @extend %bg-img;
                 }
             }
 
-            .categories-name {
+            .name {
                 font-size: 24px;
                 color: rgb(46, 45, 44);
                 font-weight: 600;
@@ -75,10 +76,10 @@
     flex-direction: row;
     padding-left: 5%;
     margin-bottom: 50px;
-    background-color: rgb(241, 241, 241);
+    background-color: $almost-white;
     
     .product-carousel-container {
-        background-color: white;
+        background-color: $white;
         @include for-xs-phone-only {
             display: none;
         }
@@ -91,13 +92,13 @@
         .product-img-wrap {
             width: 645px;   
             
-            .product-img {
+            .img {
                 @extend %bg-img;
             }
         }
     }
     .product-items-container {
-        background-color: white;
+        background-color: $white;
         padding-bottom: 30px;
         @include for-xs-phone-only {
             width: 100%;
@@ -112,7 +113,7 @@
         .product-item-container {
             .product-item {
                 cursor: pointer;
-                .product-item-img-wrap {
+                .img-wrap {
                     margin-top: 15px;
                     width: 200px;
                     height: 200px;
@@ -132,14 +133,14 @@
                         width: 200px;
                         height: 200px;
                     }
-                    .product-item-img {
+                    .img {
                         @extend %bg-img;
                     }
                 }
-                .product-item-name a{
+                .name a{
                     text-decoration: none;
                     font-family: SF Pro Display;
-                    color: rgb(0, 0, 0);
+                    color: $black;
                     font-weight: 600;
                     margin-top: 23px;   
                     text-align: center;
@@ -153,14 +154,14 @@
                         font-size: 18px;
                     }
                 }
-                .product-item-name a:hover{
-                    color: red;
+                .name a:hover{
+                    color: $red;
                 }
-                .product-item-price {
+                .price {
                     font-size: 20px;
                     font-weight: 300;
                     font-family: SF Pro Display;
-                    color: rgb(0, 0, 0);
+                    color: $black;
                     padding-top: 5px;
                     @include for-xs-phone-only {
                         font-size: 12px;
@@ -172,10 +173,10 @@
                         font-size: 18px;
                     }
                 }
-                .product-item-btn { 
-                    background: rgb(228, 36, 13);
+                .btn { 
+                    background: $red;
                     border-radius: 4px;
-                    color: rgb(255, 255, 255);
+                    color: $white;
                     border: none;
                     box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
                     text-shadow: 0 1px 3px rgba(0,0,0,.2);

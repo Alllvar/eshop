@@ -27,7 +27,7 @@ class Header extends React.Component {
             <header className="container-fluid header d-flex flex-column">
                 <div className="header-top-container py-3 d-flex flex-row justify-content-center align-self-center w-100">
                     <div className="logo-container">
-                        <div className="logo"></div>
+                        <div className="logo" />
                     </div>
                     <div className="search-container position-relative d-flex flex-row">
                         <input className="search w-100" type="text" placeholder="Пошук" />
@@ -36,7 +36,7 @@ class Header extends React.Component {
                         {INFO_MENU_ITEM.map(this.handleInfoItem)}
                     </div>
                     <div className="header-icon-wrap">
-                        <i className="fa fa-shopping-bag"></i>
+                        <i className="fa fa-shopping-bag" />
                     </div>
                 </div>
                 <div className="header-menu d-flex flex-row">
@@ -46,11 +46,11 @@ class Header extends React.Component {
                     <div className="online-chat-container text-center">
                         Чат онлайн
                     </div>
-                    <div className="header-phone-container d-flex flex-column">
+                    <div className="phone-container d-flex flex-column">
                         <div className="header-phone-header align-self-end">
                             Гаряча лінія
                         </div>
-                        <div className="header-phone align-self-end">
+                        <div className="number align-self-end">
                             +38 (066) 00 444 88
                         </div>
                     </div>

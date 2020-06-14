@@ -7,10 +7,10 @@ class IndexPage extends React.Component {
     handleItem = ({id, img, text}) => {
         return (
             <div key={id} className="categories-element d-flex flex-row align-items-center">
-                <div className="categories-img-wrap">
-                    <img className="categories-img" src={img} alt="" />
+                <div className="img-wrap">
+                    <img className="img" src={img} alt="iPhone" />
                 </div>
-                <div className="categories-name d-block">{text}</div>
+                <div className="name d-block">{text}</div>
             </div>
         )
     }
@@ -19,14 +19,14 @@ class IndexPage extends React.Component {
         return (
             <div key={id} className="product-item-container w-50">
                 <div className="product-item d-flex flex-column justufy-content-center align-items-center">
-                    <div className="product-item-img-wrap">
-                        <img src={img} className="product-item-img" />
+                    <div className="img-wrap">
+                        <img src={img} className="img" alt="product" />
                     </div>
-                    <div className="product-item-name">
+                    <div className="name">
                         <a href={href}>{name}</a>
                     </div>
-                    <div className="product-item-price">{price}</div>
-                    <div className="product-item-btn">{btntext}</div>
+                    <div className="price">{price}</div>
+                    <div className="btn">{btntext}</div>
                 </div>
             </div>
         )
@@ -43,7 +43,7 @@ class IndexPage extends React.Component {
                 <section className="homepage-product-container d-flex w-90 h-100">
                     <div className="product-carousel-container w-50">
                         <div className="product-img-wrap">
-                            <img className="product-img" src={ iPhone2 } />
+                            <img className="img" src={ iPhone2 } alt="product" />
                         </div>
                     </div>
                     <div className="product-items-container d-flex flex-wrap w-50">

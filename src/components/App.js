@@ -3,12 +3,12 @@ import {
     BrowserRouter as Router,
     Route
 } from 'react-router-dom';
-import ProductPage from '../components/product-page';
-import IndexPage from '../components/index-page';
-import Header from './header/index';
-import Footer from './footer/index';
-import Cart from './cart/index';
-import './app.scss';
+import ProductPage from './product-page';
+import IndexPage from './index-page';
+import Header from './header';
+import Footer from './footer';
+import Cart from './cart';
+import '../styles/app/app.scss';
 
 // const history = createBrowserHistory();
 
